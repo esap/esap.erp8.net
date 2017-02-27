@@ -18,11 +18,17 @@
 
 * ES数据库: <a href="./db/esap2.0.rar" target="_blank">esap2.rar</a> Ver2.4
 
-#### 服务器程序
+## 服务器程序
 
-* x86版: <a href="./build/esap_x86.rar" target="_blank">esap_x86.rar</a> Ver2.4 plus!
+#### 最新版
 
-* x64版: <a href="./build/esap_x64.rar" target="_blank">esap_x64.rar</a> Ver2.4 plus!
+* <a href="./build/esap2.5rc4.rar" target="_blank">esap2.5rc4.rar</a>
+
+#### 稳定版
+
+* x86版: <a href="./build/esap_x86.rar" target="_blank">esap2.4x86.rar</a>
+
+* x64版: <a href="./build/esap_x64.rar" target="_blank">esap2.4x64.rar</a>
 
 #### 文档和源码
 
@@ -32,7 +38,7 @@
 
 #### 独立模板
 
-* 微信提醒(支持ES9.2+): <a href="./db/wechat_tmp.rar" target="_blank">wechat_tmp.rar</a> **微信模块配置步骤在[第七章](c7.md)**
+* 微信提醒(支持ES9.4+): <a href="./db/wechat_tmp.rar" target="_blank">wechat_tmp.rar</a> **微信模块配置步骤在[第七章](c7.md)**
 
 * 邮件提醒(支持ES9.2+): <a href="./db/email_tmp.rar" target="_blank">email_tmp.rar</a> **相关示例在[第八章](c8.md)**
 
