@@ -1,7 +1,7 @@
 # 附录A 参考资料
 
 1. [村长blog](http://iesap.net)
-2. [ES宝典](https://erp8.net/esbook)
+2. [ES宝典](https://esbook.erp8.net)
 
 ## 玩家需求实现
 ESAP的成长离不开广大玩家的需求，特别要感谢内测组成员，他们是最可爱的人。

@@ -28,7 +28,7 @@
 
 * 官方文档 : [《ES最佳实践》](SUMMARY.md) 
 
-* Github核心仓库：[https://github.com/woylyn/esap2](https://github.com/woylyn/esap2) 欢迎提需求(玩家需求实现进度见[参考资料](ref.md))
+* Github核心仓库：[https://github.com/esap/erp8](https://github.com/esap/erp8) 欢迎提需求(玩家需求实现进度见[参考资料](ref.md))
 
 #### 独立模板
 
