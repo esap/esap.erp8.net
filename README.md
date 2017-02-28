@@ -14,12 +14,6 @@
 
 ## 下载地址
 
-#### 标准数据库
-
-* ES数据库: <a href="./db/esap2.0.rar" target="_blank">esap2.rar</a> Ver2.4
-
-## 服务器程序
-
 #### 最新版
 
 * <a href="./build/esap2.5rc4.rar" target="_blank">esap2.5rc4.rar</a>
@@ -30,17 +24,21 @@
 
 * x64版: <a href="./build/esap_x64.rar" target="_blank">esap2.4x64.rar</a>
 
-#### 文档和源码
+#### 文档&源码
 
 * 官方文档 : [《ES最佳实践》](SUMMARY.md) 
 
 * Github核心仓库：[https://github.com/esap/erp8](https://github.com/esap/erp8) 欢迎提需求(玩家需求实现进度见[参考资料](ref.md))
 
-#### 独立模板
+#### ES模板
 
 * 微信提醒(支持ES9.4+): <a href="./db/wechat_tmp.rar" target="_blank">wechat_tmp.rar</a> **微信模块配置步骤在[第七章](c7.md)**
 
 * 邮件提醒(支持ES9.2+): <a href="./db/email_tmp.rar" target="_blank">email_tmp.rar</a> **相关示例在[第八章](c8.md)**
+
+#### 示例数据库
+
+* ES数据库: <a href="./db/esap2.0.rar" target="_blank">esap2.rar</a> Ver2.4
 
 ## 捐赠
 维护这个项目需要大量时间和精力，如果它确实帮上了你的忙，不要忘了请我喝杯茶哦 :)
