@@ -9,7 +9,9 @@
 
 ##### 最新版
 
-* <a href="./build/esap2.5rc5.rar" target="_blank">v2.5rc5.rar</a>
+* <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86.rar</a>
+
+* <a href="./build/esap2.5x64.rar" target="_blank">v2.5x64.rar</a>
 
 ##### 文档&源码
 
@@ -25,7 +27,7 @@
 
 ##### 示例数据库
 
-* <a href="./db/esap2.0.rar" target="_blank">v2.4</a> 
+* <a href="./db/esap2.0.rar" target="_blank">v2.5</a> 
 
 > ES 9.4.124; SQLSERVER 2008R2
 
@@ -41,7 +43,7 @@
 #### 更新日志
 
 ##### v2.5 里程碑！
-公测中
+发布于`2017-3-8`
 
 * 微信提醒新增图片、文件消息支持；
 * 微信提醒新增多人多部门消息支持；
@@ -57,6 +59,7 @@
 * 微信超级查询新增扫码(二维码/条码)查询支持；
 * 微信超级查询新增图片，附件查询支持；
 * 微信超级查询新增OCR接口；
+* 微信超级查询增加自动拆分消息功能(500字)；
 * 修复超级查询随机排序问题；
 * 采用echo框架重构公共库。
 
