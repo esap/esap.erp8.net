@@ -9,9 +9,9 @@
 
 ##### 最新版
 
-* <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86.rar</a>
+* <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86 plus!</a>
 
-* <a href="./build/esap2.5x64.rar" target="_blank">v2.5x64.rar</a>
+* <a href="./build/esap2.5x64.rar" target="_blank">v2.5x64 plus!</a>
 
 ##### 文档&源码
 
@@ -21,13 +21,13 @@
 
 ##### ES模板
 
-* 微信模板(支持ES9.4+): <a href="./db/wechat_tmp.rar" target="_blank">wechat_tmp.rar</a> 
+* 微信模板(支持ES9.4+): <a href="./db/wechat_tmp.rar" target="_blank">wechat_tmp plus!</a> 
 
 * 邮件提醒(支持ES9.2+): <a href="./db/email_tmp.rar" target="_blank">email_tmp.rar</a> 
 
 ##### 示例数据库
 
-* <a href="./db/esap2.0.rar" target="_blank">v2.5</a> 
+* <a href="./db/esap2.0.rar" target="_blank">v2.5 plus!</a> 
 
 > ES 9.4.124; SQLSERVER 2008R2
 
@@ -60,6 +60,9 @@
 * 微信超级查询新增图片，附件查询支持；
 * 微信超级查询新增OCR接口；
 * 微信超级查询增加自动拆分消息功能(500字)；
+* 微信超级查询增加填报功能；plus!
+* 增强办理链接加密级别；plus!
+* 增强微信图库兼容级别；plus!
 * 修复超级查询随机排序问题；
 * 采用echo框架重构公共库。
 
