@@ -5,13 +5,15 @@
 ## ES最佳实践
 凝聚ERP高级开发实践经验和持续成果的免费项目——ESAP，来自村长的倾情奉献!
 
-#### [快速开始](s1.md)
+#### [快速开始](s0.md)
 
-##### 最新发布
+##### 最新版本
+* <a href="./build/esap2.6beta7.rar" target="_blank">v2.6beta7.rar </a><span style="color:red"> new!</span>
 
-* <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86</a><span style="color:red">plus!</span>
+##### 历史版本
+* <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86</a>
 
-* <a href="./build/esap2.5x64.rar" target="_blank">v2.5x64</a><span style="color:red">plus!</span>
+* <a href="./build/esap2.5x64.rar" target="_blank">v2.5x64</a>
 
 ##### 文档&源码
 
@@ -45,7 +47,12 @@
 ##### v2.6
 内测中
 
+* 使用vux重写app；
+* 使用sqlt重写微信提醒插件,支持自定义sql模板；
+* 使用sqlt重写微信超级查询应用,支持自定义sql模板；
+* 使用sqlt重写api模块,支持自定义sql模板；
 * 新增ESWEB待办事宜列表打开；
+* 超级查询新增用户进入时显示可用查询列表功能，企业号端需开启上报用户进入；
 * 超级查询新增ES表单搜索查看功能；
 * 超级查询优化消息机制，改善网络延迟造成的重发问题；
 * 增加admin查询管理模块(/admin)；
