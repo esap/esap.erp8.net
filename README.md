@@ -8,7 +8,7 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.6beta7.rar" target="_blank">v2.6beta7.rar </a><span style="color:red"> new!</span>
+* <a href="./build/esap2.6beta10.rar" target="_blank">v2.6beta10.rar </a><span style="color:red"> new!</span>
 
 ##### 历史版本
 * <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86</a>
@@ -40,6 +40,13 @@
   <img src="./img/esap_pay.png" width="400">
 </p>
 
+#### ESAP部落微信公众号
+关注公众号，及时掌握最新动态 => ESAPbuluo ↓↓↓
+
+<p align="center">
+  <img src="./img/wx.jpg" width="240">
+</p>
+
 <hr />
 
 #### 更新日志
@@ -47,6 +54,9 @@
 ##### v2.6
 公测中
 
+* 微信提醒新增“部门/职位”格式的接收人支持；
+* admin模块增加登陆验证；
+* 新增保密消息(safe=1)；
 * 新增log模块，运行日志写入esap.log文件；
 * 使用vux重写app；
 * 使用sqlt重写微信提醒插件,支持自定义sql模板；
