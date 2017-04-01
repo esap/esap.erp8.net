@@ -8,7 +8,7 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.6beta10.rar" target="_blank">v2.6beta10.rar </a><span style="color:red"> new!</span>
+* <a href="./build/esap2.7destiny.rar" target="_blank">v2.7destiny.rar </a><span style="color:red"> new!</span>
 
 ##### 历史版本
 * <a href="./build/esap2.5x86.rar" target="_blank">v2.5x86</a>
@@ -51,9 +51,10 @@
 
 #### 更新日志
 
-##### v2.6
+##### v2.7
 公测中
 
+* 微信查询新增默认应用支持(全新的玩法，更多的脑洞)；
 * 微信提醒新增“部门/职位”格式的接收人支持；
 * admin模块增加登陆验证；
 * 新增保密消息(safe=1)；
