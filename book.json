@@ -1,0 +1,21 @@
+{
+	"title": "ESAP服务器",
+    "description": "村长亲手打造的ERP开发利器",
+    "language": "zh-hans",
+	
+	"links" : {
+	    "sidebar" : {
+	        "官网" : "https://erp8.net"
+	    }
+	},
+    
+    "plugins": ["splitter"],
+	   
+    "styles": {
+        "website": "styles/website.css",
+	    "ebook": "styles/ebook.css",
+	    "pdf": "styles/pdf.css",
+	    "mobi": "styles/mobi.css",
+	    "epub": "styles/epub.css"    
+     }
+}
