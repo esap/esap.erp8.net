@@ -76,5 +76,8 @@ ES开启系统网盘，esap在网盘服务器上运行。
 
 其他与ES有关的新建，查看，待办列表同理。
 
+## 微信消息回执错误码解释
+参考微信官方解释[https://work.weixin.qq.com/api/doc#10649](https://work.weixin.qq.com/api/doc#10649)
+
 ## 其它问题
 开启Debug模式，分析打印出的esap.log调试信息，或将esap.log发给村长大人~，然后给村长发小红包:)

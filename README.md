@@ -8,11 +8,11 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.7destiny beta3.rar" target="_blank">v2.7 beta3 </a><span style="color:red"> destiny!</span>
+* <a href="./build/esap2.7destiny rc2.rar" target="_blank">v2.7 rc2 </a><span style="color:red"> destiny!</span>
 
-##### 文档&源码
+##### 文档&需求
 
-* 文档源码(Github)：[https://github.com/esap/esap.erp8.net](https://github.com/esap/esap.erp8.net) 
+* 详细文档PDF版（by @淡淡风）：<a href="/build/ESAP微信版部署教程.pdf" target="_blank">ESAP微信版部署教程</a> <span style="color:red">new!</span>
 
 * 欢迎提需求，[玩家需求实现进度](ref.md)
 
@@ -43,6 +43,7 @@
 ##### v2.7 destiny!
 跨版本公测中，命运由您决定！
 
+* [新增]新增upload模块，用于上传图片文件。
 * [新增]新增计划任务模块(全新的玩法，更多的脑洞)；<span style="color:red">玩家需求!</span>
 * [新增]微信查询新增多重返回，可以一次写多个select，保证返回的字段数量一致即可；
 * [新增]新增若干开关，可手工更改EsConf配置文件进行调整；
@@ -60,6 +61,8 @@
 * [新增]HOST配置支持端口，可以与监听端口(例如9090)不一致，更方便外网NAT；
 * [新增]微信权限支持自定义角色权限支持；
 * [新增]esmail自定义发件人支持,可不使用系统Email账户,但与系统Email共用smtp服务器设置；<span style="color:red">玩家需求!</span>
+* [调整]调整微信提醒，邮件提醒，使用计划任务进行配置；
+* [调整]调整微信反馈，增加附件上传与回复；
 * [调整]超级查询优化消息机制，改善网络延迟造成的重发问题；
 * [调整]采用vux重写app；
 * [调整]采用sqlt重写esmail插件、微信提醒插件、超级查询和api模块等，支持自定义sql模板；
