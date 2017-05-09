@@ -8,7 +8,9 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.7destiny rc2.rar" target="_blank">v2.7 rc2 </a><span style="color:red"> destiny!</span>
+* <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7正式版x86</a><span style="color:red"> destiny!</span>
+
+* <a href="./build/esap2.7destiny_x64.rar" target="_blank">v2.7正式版x64</a><span style="color:red"> destiny!</span>
 
 ##### 文档&需求
 
@@ -41,21 +43,22 @@
 #### 更新日志
 
 ##### v2.7 destiny!
-跨版本公测中，命运由您决定！
+发布于`2017-5-9`
 
-* [新增]新增upload模块，用于上传图片文件。
+* [新增]新增WxqdTitle配置项，用于配置微信签到显示标题。
+* [新增]新增upload接口，用于上传图片文件。
+* [新增]微信查询新增P参数，表示输入的所有内容。
 * [新增]新增计划任务模块(全新的玩法，更多的脑洞)；<span style="color:red">玩家需求!</span>
 * [新增]微信查询新增多重返回，可以一次写多个select，保证返回的字段数量一致即可；
 * [新增]新增若干开关，可手工更改EsConf配置文件进行调整；
 * [新增]微信查询新增默认应用支持(全新的玩法，更多的脑洞)；<span style="color:red">玩家需求!</span>
-* [新增]admin查询管理模块(/admin)；
 * [新增]新增log模块，运行日志写入esap.log文件，上次日志存入日志备份(esap.log.bak)，当配置Debug=false时，将不再打印sql模板相关信息，可大幅减小日志文件体积；
 * [新增]微信提醒增加重发机制(配置文件ReTryMsg=true)，海外用户应用时更稳定；<span style="color:red">玩家需求!</span>
 * [新增]微信提醒“部门/职位”格式的接收人支持；<span style="color:red">玩家需求!</span>
 * [调整]微信提醒接收人填报更自由，可使用姓名，账号，手机号，微信号，邮箱，职位，部门任意组合搭配；
 * [新增]支持保密消息(safe=1)；<span style="color:red">玩家需求!</span>
 * [新增]ESWEB待办事宜列表打开；
-* [新增]超级查询新增用户进入时显示可用查询列表，企业号端需开启`上报用户进入`，此外配置文件ShowFuncList=true时，查询中匹配任何功能也会返回可用查询列表；
+* [新增]超级查询新增用户进入时显示可用查询列表(配置ShowFuncListEnter=true)，企业号端需开启`上报用户进入`，此外配置文件ShowFuncList=true时，查询中未匹配任何功能也会返回可用查询列表；
 * [新增]超级查询新增ES表单搜索查看功能；
 * [新增]超级查询增加打包回复模式，解决消息内容过多时的乱序问题（mediaOnly=3）；
 * [新增]HOST配置支持端口，可以与监听端口(例如9090)不一致，更方便外网NAT；
