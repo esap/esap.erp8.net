@@ -8,9 +8,12 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7正式版x86</a><span style="color:red"> destiny!</span>
+* <a href="./build/esap2.8_freedom_beta1.rar" target="_blank">v2.8 freedom beta1</a><span style="color:red"> new!</span>
 
-* <a href="./build/esap2.7destiny_x64.rar" target="_blank">v2.7正式版x64</a><span style="color:red"> destiny!</span>
+##### 其他版本
+* <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
+
+* <a href="./build/esap2.7destiny_x64.rar" target="_blank">v2.7destiny正式版x64</a>
 
 ##### 文档&需求
 
@@ -20,7 +23,7 @@
 
 ##### 示例数据库
 
-* <a href="./db/esap2.0.rar" target="_blank">v2.7</a> <span style="color:red">destiny!</span>
+* <a href="./db/esap2.0.rar" target="_blank">v2.7destiny</a>
 
 > ES 9.4.124; SQLSERVER 2008R2
 
@@ -42,7 +45,14 @@
 
 #### 更新日志
 
-##### v2.7 destiny!
+##### v2.8 freedom!
+公测中^_^
+
+* [新增]微信办理增加多帐套支持，wxtx,wxcx表加入了db字段，填入数据库即可转到对应账套办理。<span style="color:red">玩家需求!</span>
+* [新增]sql模板新增uuid函数，用来产生不重复全局唯一ID。
+* [调整]配置文件格式调整为yaml，名称调整为esap.yml。解决配置(如密码)中包`'`号等特殊字符不识别问题。
+
+##### v2.7 destiny
 发布于`2017-5-9`
 
 * [新增]新增WxqdTitle配置项，用于配置微信签到显示标题。
@@ -73,7 +83,7 @@
 * [调整]重构ESAP主容器，采用模块化+插件化架构，适应大规模开发定制应用；
 * [修复]中文消息超过500字时拆分出空消息的bug；
 
-##### v2.5 里程碑！
+##### v2.5 里程碑
 发布于`2017-3-8`
 
 * [新增]新增微信签到，支持地图显示，支持菜单按钮签到；
@@ -97,7 +107,7 @@
 * [调整]采用echo框架重构公共库。
 * [修复]超级查询随机排序问题；
 
-##### v2.4 plus！
+##### v2.4 plus
 发布于`2017-2-4`
 
 * [新增]新增微信超级查询引擎；
