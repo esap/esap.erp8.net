@@ -8,7 +8,7 @@
 #### [快速开始](s0.md)
 
 ##### 最新版本
-* <a href="./build/esap2.8_freedom_beta1.rar" target="_blank">v2.8 freedom beta1</a><span style="color:red"> new!</span>
+* <a href="./build/esap2.8_freedom_beta3.rar" target="_blank">v2.8 freedom beta3</a><span style="color:red"> new!</span>
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -48,10 +48,15 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]新增微信会话回调（/wxchat），可存储企业号会话消息。<span style="color:red">玩家需求!</span>
+* [新增]新增api2/*接口，带错误输出(errmsg)和结果输出(output)。<span style="color:red">玩家需求!</span>
+* [新增]app新增ES绑定账号。
 * [新增]微信办理增加多帐套支持，wxtx,wxcx表加入了db字段，填入对应数据库名称即可。<span style="color:red">玩家需求!</span>
 * [新增]集成nssm和一键安装，卸载自动化批处理文件。
 * [新增]sql模板新增uuid函数，用来产生不重复全局唯一ID。
+* [调整]调整api/*接口，post/put/delete自带事务。
 * [调整]配置文件格式调整为yaml，名称调整为esap.yml。解决配置(如密码)中包`'`号等特殊字符不识别问题。
+* [修复]更新wxtx.tpl，修复微信提醒加入top100后不能发提醒的bug。
 
 ##### v2.7 destiny
 发布于`2017-5-9`
