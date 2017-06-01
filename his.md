@@ -16,32 +16,32 @@ ESAP早已不再是一套ERP级的ES模板，而是一套完整的独立生态�
 
 #### ESAP-API
 对接SQL的restfulAPI容器，无需任何二次开发，只要写写sql模板即可快速堆建你的专用数据API，已公开发布。
-> URL示例：`http://阿里云IP:9090/api/action`
+> URL示例：`http://ESAP服务器IP:9090/api/action`
 
 #### ESAP-APP
-提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，部分公开发布。
-> URL示例：`http://阿里云IP:9090/app`
+提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，demo源码开源在github.com/esap/app。
+> URL示例：`http://ESAP服务器IP:9090/app`
 
 #### ESAP-Admin
 提供ESAP管理端的访问，部分公开发布。
-> URL示例：`http://阿里云IP:9090/admin`
+> URL示例：`http://ESAP服务器IP:9090/admin`
 
 #### ESAP-WebServer
-提供专门为ESAP设计的Webserver，模块化+插件式开发，动态编译，不依赖IIS，部署简单，所有配置一个配置文件(EsConf)就搞定，已公开发布。
+提供专门为ESAP设计的Webserver，模块化+插件式开发，动态编译，不依赖IIS，部署简单，所有配置一个配置文件(esap.yml)就搞定，已公开发布。
 
 #### ESAP-Desktop
 高级桌面端B/S架构，定制实现任何需求，例如打开门禁，连接地磅，或者是连接PLC显示生产线实时数据。
 
 #### 微信API
 对接微信企业号的API，提供企业号应用接口功能，实现用户与ES对话式的交互，已公开发布。
-> URL示例：`http://阿里云IP:9090/wx`
+> URL示例：`http://ESAP服务器IP:9090/wx`
 
 #### ES库备份
 从ESAP提取的数据库核心框架，非常简单确又十分强大，已公开发布。
 
 #### ES-API
 对接ES库的专用API，不同于ESWEB，ES-API除了提供ES数据访问、工作流办理，还提供图片、附件访问，甚至包括官方没有的缩略图等接口功能，已公开发布。
-> URL示例：`http://阿里云IP:9090/es/action`
+> URL示例：`http://ESAP服务器IP:9090/es/action`
 
 ** 尽管看起来模块非常多，实际部署时仅仅只需要还原模板，再运行esap.exe就可以了，就是这么简单! **
 
