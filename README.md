@@ -7,8 +7,11 @@
 
 #### [快速开始](s0.md)
 
+#### 重要通知
+<span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8beta5+版本</span>
+
 ##### 最新版本
-* <a href="./build/esap2.8_freedom_beta4.rar" target="_blank">v2.8 freedom beta4</a><span style="color:red"> new!</span>
+* <a href="./build/esap2.8_freedom_beta5.rar" target="_blank">v2.8 freedom beta5</a><span style="color:red"> new!</span>
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -17,7 +20,7 @@
 
 ##### 文档&需求
 
-* 详细文档PDF版（by @淡淡风）：<a href="/build/ESAP微信版部署教程.pdf" target="_blank">ESAP微信版部署教程</a> <span style="color:red">new!</span>
+* 详细文档PDF版（by @淡淡风）：<a href="/build/ESAP微信版部署教程.pdf" target="_blank">ESAP微信版部署教程</a>
 
 * 欢迎提需求，[玩家需求实现进度](ref.md)
 
@@ -48,10 +51,12 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]兼容企业微信，新增文本卡片消息，仅使用企业微信时有颜色效果（灰色(gray)、高亮(highlight)、默认黑色(normal)）。
 * [新增]微信查询的结果无字段名称时，将省略名称和冒号，实现更灵活的输出。
 * [新增]微信查询进入提醒可写sql，实现灵活的提醒功能，需配置showfunclistenter=true。<span style="color:red">玩家需求!</span>
 * [调整]更换数据库驱动，全面支持多重select查询新特性，数据库要求sql2005+！<span style="color:red"> 重大调整!</span>
 * [新增]新增微信会话回调（/wxchat），可存储企业号会话消息。<span style="color:red">玩家需求!</span>
+* [新增]新增es2/*接口，带错误输出(errmsg)和结果输出(output)以及工作台显示。<span style="color:red">玩家需求!</span>。
 * [新增]新增api2/*接口，带错误输出(errmsg)和结果输出(output)。<span style="color:red">玩家需求!</span>
 * [新增]app新增ES绑定账号。
 * [新增]微信办理增加多帐套支持，wxtx,wxcx表加入了db字段，填入对应数据库名称即可。<span style="color:red">玩家需求!</span>
