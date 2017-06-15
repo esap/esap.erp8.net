@@ -8,10 +8,10 @@
 #### [快速开始](s0.md)
 
 #### 重要通知
-<span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8beta5+版本</span>
+<span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
 
 ##### 最新版本
-* <a href="./build/esap2.8_freedom_beta5.rar" target="_blank">v2.8 freedom beta5</a><span style="color:red"> new!</span>
+* <a href="./build/esap2.8_freedom_beta6.rar" target="_blank">v2.8 freedom beta6</a><span style="color:red"> new!</span>
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -51,6 +51,12 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]新增ES组织架构增量同步。<span style="color:red">玩家需求!</span>
+* [新增]新增agents配置项，可手工配置代理多个企业微信应用。
+* [调整]微信专用查询(qname=agentId)隔离其他查询，菜单查询不受限制。
+* [调整]微信查询默认使用打包模式。
+* [新增]微信查询新增safe字段，控制回复是否使用保密消息。<span style="color:red">玩家需求!</span>
+* [新增]新增dbport配置，用于配置数据库端口。
 * [新增]兼容企业微信，新增文本卡片消息，仅使用企业微信时有颜色效果（灰色(gray)、高亮(highlight)、默认黑色(normal)）。
 * [新增]微信查询的结果无字段名称时，将省略名称和冒号，实现更灵活的输出。
 * [新增]微信查询进入提醒可写sql，实现灵活的提醒功能，需配置showfunclistenter=true。<span style="color:red">玩家需求!</span>
@@ -71,15 +77,15 @@
 
 * [新增]新增WxqdTitle配置项，用于配置微信签到显示标题。
 * [新增]新增upload接口，用于上传图片文件。
-* [新增]微信查询新增P参数，表示输入的所有内容。
+* [新增]微信查询新增P参数(大写)，表示输入的所有内容。
 * [新增]新增计划任务模块(全新的玩法，更多的脑洞)；<span style="color:red">玩家需求!</span>
 * [新增]微信查询新增多重返回，可以一次写多个select，保证返回的字段数量一致即可；
-* [新增]新增若干开关，可手工更改EsConf配置文件进行调整；
+* [新增]新增若干开关，可手工更改配置文件进行调整；
 * [新增]微信查询新增默认应用支持(全新的玩法，更多的脑洞)；<span style="color:red">玩家需求!</span>
-* [新增]新增log模块，运行日志写入esap.log文件，上次日志存入日志备份(esap.log.bak)，当配置Debug=false时，将不再打印sql模板相关信息，可大幅减小日志文件体积；
+* [新增]新增log模块，运行日志写入esap.log文件，~~上次日志存入日志备份(esap.log.bak)~~，当配置Debug=false时，将不再打印sql模板相关信息，可大幅减小日志文件体积；
 * [新增]微信提醒增加重发机制(配置文件ReTryMsg=true)，海外用户应用时更稳定；<span style="color:red">玩家需求!</span>
 * [新增]微信提醒“部门/职位”格式的接收人支持；<span style="color:red">玩家需求!</span>
-* [调整]微信提醒接收人填报更自由，可使用姓名，账号，手机号，微信号，邮箱，职位，部门任意组合搭配；
+* [调整]微信提醒接收人填报更自由，可使用姓名，账号，手机号，~~微信号，邮箱，~~职位，部门任意组合搭配；
 * [新增]支持保密消息(safe=1)；<span style="color:red">玩家需求!</span>
 * [新增]ESWEB待办事宜列表打开；
 * [新增]超级查询新增用户进入时显示可用查询列表(配置ShowFuncListEnter=true)，企业号端需开启`上报用户进入`，此外配置文件ShowFuncList=true时，查询中未匹配任何功能也会返回可用查询列表；
@@ -149,7 +155,7 @@
 
 * 修复BOM复制本表代码；  
 * 更新vBOM、vPBOM视图，修复子件超过10个的RN排序问题；  
-* 导入微信提醒、微信通讯录、微信提醒视图(vwxtx)；    
+* 导入微信提醒、~~微信通讯录、微信提醒视图(vwxtx)~~；    
 * 增加微信企业号API及基本配置； 
 
 ##### v2.0 

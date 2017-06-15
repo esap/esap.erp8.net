@@ -2,7 +2,7 @@
 * 2.7版开始，新增了计划任务功能，目前包括两种用户计划任务和两种系统计划任务(微信提醒，esmail)：
 
  1. 查询任务（select）
- 2. 执行任务（update，insert，delete）
+ 2. 执行任务（update/insert/delete）
 
 ## 配置方式
 * 首先，到sql/get/task.tpl中编辑需要执行的sql模板
