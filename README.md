@@ -11,7 +11,29 @@
 <span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
 
 ##### 最新版本
-* <a href="./build/esap2.8_freedom_beta6.rar" target="_blank">v2.8 freedom beta6</a><span style="color:red"> new!</span>
+* 企业微信号版：<a href="./build/esap2.8_freedom_beta7.rar" target="_blank">v2.8 freedom beta7</a><span style="color:red"> new!</span>
+
+* 订阅服务号版：<a href="./build/esap2.8_freedom_beta6_pub.rar" target="_blank">v2.8 freedom beta6</a><span style="color:red"> new!</span>
+
+> 注意：订阅服务号版回调必须是`加密模式`！
+
+##### 版本功能差异
+由于微信限制，订阅服务号版仅能做有限的查询，与身份认证相关的功能不可用。
+
+|功能特性|订阅服务号版|企业微信版|
+|:----:|:--:|:--:|
+|微信查询|√|√|
+|微信提醒|×|√|
+|微信图库|√|√|
+|微信签到|×|√|
+|微信反馈|√|√|
+|微信会话|×|√|
+|Esmail|×|√|
+|计划任务|×|√|
+|查询特性：多重select|√|√|
+|查询特性：分条返回|×|√|
+|查询特性：系统变量|×|√|
+|查询特性：ES工作流|×|√|
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -51,6 +73,9 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]新增微信打卡（WxdkTask）下载计划。
+* [新增]新增微信审批（WxspTask）下载计划，支持自定义模板，支持多图。<span style="color:red">cool!</span>
+* [新增]新增订阅服务号版，回调地址为/wxs，目前支持微信超级查询和图库功能。<span style="color:red">玩家需求!</span>
 * [新增]新增ES组织架构增量同步。<span style="color:red">玩家需求!</span>
 * [新增]新增agents配置项，可手工配置代理多个企业微信应用。
 * [调整]微信专用查询(qname=agentId)隔离其他查询，菜单查询不受限制。
