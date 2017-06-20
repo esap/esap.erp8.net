@@ -1,8 +1,8 @@
 # 计划任务
-* 2.7版开始，新增了计划任务功能，目前包括两种用户计划任务和两种系统计划任务(微信提醒，esmail)：
+* 2.7版开始，新增了计划任务功能，目前包括两种用户计划任务和几种系统计划任务(微信提醒，esmail，通讯录同步，审批同步，打卡同步)：
 
- 1. 查询任务（select）
- 2. 执行任务（update/insert/delete）
+ 1. 查询任务QueryTask（select）
+ 2. 执行任务ExecTask（update/insert/delete）
 
 ## 配置方式
 * 首先，到sql/get/task.tpl中编辑需要执行的sql模板

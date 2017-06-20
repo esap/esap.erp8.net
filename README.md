@@ -73,8 +73,8 @@
 ##### v2.8 freedom!
 公测中^_^
 
-* [新增]新增微信打卡（WxdkTask）下载计划。
-* [新增]新增微信审批（WxspTask）下载计划，支持自定义模板，支持多图。<span style="color:red">cool!</span>
+* [新增]新增微信打卡（WxdkTask）同步计划。
+* [新增]新增微信审批（WxspTask）同步计划，支持自定义模板，支持多图。<span style="color:red">cool!</span>
 * [新增]新增订阅服务号版，回调地址为/wxs，目前支持微信超级查询和图库功能。<span style="color:red">玩家需求!</span>
 * [新增]新增ES组织架构增量同步。<span style="color:red">玩家需求!</span>
 * [新增]新增agents配置项，可手工配置代理多个企业微信应用。

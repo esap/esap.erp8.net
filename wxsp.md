@@ -1,54 +1,79 @@
 # 微信审批
-* 2.8版开始，新增通讯录同步计划，可直接同步ES部门和用户，该功能属于测试阶段，默认不开启，请自行配制task.json进行开启，同时配置txlsercet为通信录sercet，并开启编辑通讯录权限。
+* 2.8版开始，新增微信审批同步计划，可将微信审批内容直接存入ES表单，并且支持自定义模板。
 
-## 开启企业微信端同步接口
-* 登陆【企业微信】-【管理工具】-【通讯录同步】，权限选择编辑通讯录权限。
+* 该功能属于测试阶段，默认不开启，请自行配制task.json进行开启，同时配置esap.yml的agents的`3010040`应用sercet。
 
-![](./img/txl-1.png)
+## 开启企业微信审批
+* 登陆进入【企业微信】-【企业应用】-【审批】，记录下AgentId和Secret。
+
+![](./img/wxsp.png)
+
+## 修改esap配置文件
+* 修改esap.yml，填入上面的应用AgentId和Secret。
+
+![](./img/wxsp2.png)
 
 ## 开启esap同步计划
-* 修改task.json,开启`增量同步ES组织`计划，建议周期20分钟
+* 修改task.json,开启`微信审批`计划。默认周期为1分钟，便于调试，生产环境建议周期5分钟。
 
-![](./img/txl-2.png)
+![](./img/wxsp3.png)
 
-## *自定义通讯录同步[高级教程]
-* esap强大的sql模板功能，允许用户自定义通讯录表，从而实现任何基于sql的系统组织架构同步。
+* 重启esap,请假和报销审批记录就会同步到ES的`微信审批`模板了。
 
-* 具体实现步骤非常简单，找到sql/get/task.tpl使用notepad++进行编辑
+## *自定义审批模板同步[高级教程]
+* esap强大的sql模板功能，允许用户将自定义审批模板数据同步到sql，甚至实现ES表单新建。
 
-* 其中的`sync.dept`，`sync.user`两个模板，指向其他自定义数据表，并保证输出字段一致即可。
+* 具体实现步骤如下：
 
-```
-{ {define "sync.dept"} }
-SELECT DeptName name		--部门名称
-	,DeptId id		--部门id
-	,isnull(SuperId,1) parentid		--上级id
-	,10000-floor(right(Path,2)) as Order1		--排序，越大越靠前
-FROM ES_Dept
-where DeptId>1
+* (1) 在企业微信自定义一个审批模板，例如缺勤表。
+
+![](./img/wxsp4.png)
+
+* (2) 在ES中也建立一个审批模板，用于存放记录，例如缺勤表。
+
+![](./img/wxsp5.png)
+
+* (3) 使用notepad++修改sql/post/wxsp.tpl,定义一个名叫`缺勤表.wxsp`的`sql模板`，用来连接企业微信与ES，注意`.wxsp`后缀是必须的。
+
+![](./img/wxsp6.png)
+
+* (4) 这样就完成了自定义审批模板的同步设置。
+
+![](./img/wxsp7.png)
+
+## 代码注释
+```sql
+{ {define "缺勤表.wxsp"} } --定义sql模板【缺勤表.wxsp】
+  if not exists (select * from 缺勤表 where spnum=:SpNum)   --检查审批流水号SpNum是否存在，SpNum是`微信审批`系统变量
+  begin
+	insert
+		缺勤表(学号,课程,日期,制表,记录日期,spnum,spstatus,excelserverrcid,excelserverrtid)  --插入主表记录
+	select
+		'{ {.学号} }',   --对应企业微信的学号，以下带花括号的变量同理
+		'{ {.课程} }',
+		'{ {.日期} }',
+		:ApplyName,   --申请人姓名，微信审批系统变量
+		'{ {.制单日期} }',
+		:SpNum,       --审批编号，微信审批系统变量
+		:SpStatus,    --审批状态，微信审批系统变量
+		:rcid,:rtid   --rcid,rtid，esap系统变量
+  { {template "repcase"} }    --插入Es_repcase记录，用于ES工作台显示
+  end
 { {end} }
-
-{ {define "sync.user"} }
-SELECT
-	UserLogin userid		--用户账号，唯一
-	,UserName name		--用户姓名
-	,mobilephone mobile		--用户手机，唯一
-	,DeptId dept		--用户部门id
-	,roleNames position		--用户职位
-	,Email		--用户Email
-FROM ES_User
-{ {end} }
 ```
 
-* 更改示例：(部门同步改到wxdept表，用户同步改到wxtxl表)
-
+## 微信审批系统变量全解
 ```
-{ {define "sync.dept"} }
-SELECT name, id, parentid, Order1
-FROM wxdept
-{ {end} }
-
-{ {define "sync.user"} }
-SELECT userid, name, mobile, dept, position, Email FROM wxtxl
-{ {end} }
+Spname          // 审批名称(请假，报销，自定义审批名称)
+ApplyName       // 申请人姓名
+ApplyOrg        // 申请人部门
+ApprovalName    // 审批人姓名
+NotifyName      // 抄送人姓名
+SpStatus        // 审批状态：1审批中；2 已通过；3已驳回；4已取消
+SpNum           // 审批单号
+Leave           // 请假类型
+Expense         // 报销类型
 ```
+
+## 关于sql模板
+更多内容请阅读[SQL模板章节](/sqltpl.md)
