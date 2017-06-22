@@ -76,4 +76,4 @@ select '{ {$picno} }'
 |int64date|ESAP|将日期戳转换成日期，主要用于微信审批同步的日期处理|
 |int64datetime|ESAP|将日期戳转换成日期时间，主要用于微信审批同步的日期+时间处理|
 |getwechatname|ESAP|调根据微信userid获取姓名|
-|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field string, value int64)|
+|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field string, spNum int64)|

@@ -11,7 +11,7 @@
 <span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
 
 ##### 最新版本
-* 企业微信号版：<a href="./build/esap2.8_freedom_beta7.rar" target="_blank">v2.8 freedom beta7</a><span style="color:red"> new!</span>
+* 企业微信号版：<a href="./build/esap2.8_freedom_beta8.rar" target="_blank">v2.8 freedom beta8</a><span style="color:red"> new!</span>
 
 * 订阅服务号版：<a href="./build/esap2.8_freedom_beta6_pub.rar" target="_blank">v2.8 freedom beta6</a><span style="color:red"> new!</span>
 
@@ -48,7 +48,7 @@
 
 ##### 示例数据库
 
-* <a href="./db/esap2.0.rar" target="_blank">v2.7destiny</a>
+* <a href="./db/esap2.0.rar" target="_blank">v2.8freedom</a>
 
 > ES 9.4.124; SQLSERVER 2008R2
 
@@ -73,6 +73,7 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]APP新增销售订单，采购订单，出入库单等实用功能。
 * [新增]新增微信打卡（WxdkTask）同步计划。
 * [新增]新增微信审批（WxspTask）同步计划，支持自定义模板，支持多图。<span style="color:red">cool!</span>
 * [新增]新增订阅服务号版，回调地址为/wxs，目前支持微信超级查询和图库功能。<span style="color:red">玩家需求!</span>
