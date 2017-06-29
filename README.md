@@ -73,6 +73,7 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]整合多种数据库驱动，支持多种数据库,例如：mssql,mysql,postgresql,sqlite,access,excel等，其中access,excel,sql2000不支持多重select！<span style="color:red">freedom!</span>
 * [新增]APP新增销售订单，采购订单，出入库单等实用功能。
 * [新增]新增微信打卡（WxdkTask）同步计划。
 * [新增]新增微信审批（WxspTask）同步计划，支持自定义模板，支持多图。<span style="color:red">cool!</span>

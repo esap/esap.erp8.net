@@ -22,6 +22,9 @@
 <img src="./img/9.05.jpg" width="320">
 <img src="./img/9.06.jpg" width="320">
 
+## 采购入库确认
+<img src="./img/9.15.jpg" width="320">
+
 ## 产品检验查询
 ![](./img/9.03.png)
 

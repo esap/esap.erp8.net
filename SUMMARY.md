@@ -12,6 +12,7 @@
  - [微信审批同步](wxsp.md)
  - [微信打卡同步](wxdk.md)
 * [SQL模板](sqltpl.md)
+* [数据库兼管](feature.md)
 * [常见问题](qa.md)
 * [ESAP起源](his.md)
  - [第1章 一切从吐槽说起](c1.md)
