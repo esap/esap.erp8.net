@@ -5,6 +5,7 @@ ESAP整合了多种数据库驱动，可以连接大部分数据库，部分示�
 * [SqlServer 2000](#SqlServer 2000)
 * [mysql](#mysql)
 * [postgresql](#postgresql)
+* [sqlite](#sqlite)
 * [access](#access)
 * [excel](#excel)
 * [兼管其他平台](#兼管其他平台)
@@ -47,6 +48,12 @@ server: localhost
 userid: postgres
 pwd: 123
 dbname: dbName
+```
+
+## sqlite
+```
+dbdriver: sqlite
+dbname: "d:\\mydb.db"
 ```
 
 ## access

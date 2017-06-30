@@ -13,7 +13,7 @@
 ##### 最新版本
 * 企业微信号版：<a href="./build/esap2.8_freedom_beta8.rar" target="_blank">v2.8 freedom beta8</a><span style="color:red"> new!</span>
 
-* 订阅服务号版：<a href="./build/esap2.8_freedom_beta8_pub.rar" target="_blank">v2.8 freedom beta8</a><span style="color:red"> new!</span>
+* 订阅服务号版：<a href="./build/esap2.8_freedom_beta9_pub.rar" target="_blank">v2.8 freedom beta9</a><span style="color:red"> new!</span>
 
 > 注意：订阅服务号版回调必须是`加密模式`！
 
