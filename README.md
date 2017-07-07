@@ -11,29 +11,30 @@
 <span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
 
 ##### 最新版本
-* 企业微信号版：<a href="./build/esap2.8_freedom_beta8.rar" target="_blank">v2.8 freedom beta8</a><span style="color:red"> new!</span>
+* 企业微信号版：<a href="./build/esap2.8_freedom_rc1.rar" target="_blank">v2.8 freedom rc1</a><span style="color:red"> new!</span>
 
-* 订阅服务号版：<a href="./build/esap2.8_freedom_beta9_pub.rar" target="_blank">v2.8 freedom beta9</a><span style="color:red"> new!</span>
+* 订阅服务号版：<a href="./build/esap2.8_freedom_rc1_pub.rar" target="_blank">v2.8 freedom rc1</a><span style="color:red"> new!</span>
 
 > 注意：订阅服务号版回调必须是`加密模式`！
 
 ##### 版本功能差异
-由于微信限制，订阅服务号版仅能做有限的查询，与身份认证相关的功能不可用。
+由于微信限制，订阅服务号版仅能做有限的查询，与通讯录相关的功能不可用。
 
-|功能特性|订阅服务号版|企业微信版|
-|:----:|:--:|:--:|
-|微信查询|√|√|
-|微信提醒|×|√|
-|微信图库|√|√|
-|微信签到|×|√|
-|微信反馈|√|√|
-|微信会话|×|√|
-|Esmail|×|√|
-|计划任务|×|√|
-|查询特性：多重select|√|√|
-|查询特性：分条返回|×|√|
-|查询特性：系统变量|×|√|
-|查询特性：ES工作流|×|√|
+|功能特性|订阅服务号版|企业微信版|备注|
+|:----:|:--:|:--:|:----|
+|微信查询|√|√| |
+|微信提醒|x|√| |
+|微信图库|√|√| |
+|微信签到|×|√| |
+|微信反馈|√|√| |
+|微信会话|×|√| |
+|Esmail|√|√| |
+|计划任务|√|√| |
+|查询特性：多重select|√|√| |
+|查询特性：使用mediaid|√|√|订阅服务号可使用永久素材id|
+|查询特性：分条返回|×|√| |
+|查询特性：系统变量|×|√|订阅服务号仅有一个系统变量，即openid|
+|查询特性：ES工作流|×|√| |
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -73,6 +74,14 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]admin模块重构归来，整合配置管理，新增日志管理等功能。
+* [新增]微信提醒的pic和fh可以直接使用链接了，请修改字段长度以便更好的支持。
+* [新增]update接口增加key=file上传。
+* [修复]修复企业微信APP绑定失败的问题，secret需配置为APP应用的secret并添加可信域名。
+* [新增]新增带用户日志的文件接口(/fl/:linkno)，用于用户下载文件记录。
+* [新增]APP新增微信文库实用功能，开启企业流程制度移动查询新世界！
+* [新增]新增redirect接口(/r/*)，用于转发URL。
+* [新增]新增linkname模板函数，用于提取附件名。
 * [新增]整合多种数据库驱动，支持多种数据库,例如：mssql,mysql,postgresql,sqlite,access,excel等，其中access,excel,sql2000不支持多重select！<span style="color:red">freedom!</span>
 * [新增]APP新增销售订单，采购订单，出入库单等实用功能。
 * [新增]新增微信打卡（WxdkTask）同步计划。
@@ -97,7 +106,7 @@
 * [新增]sql模板新增uuid函数，用来产生不重复全局唯一ID。
 * [调整]调整api/*接口，post/put/delete自带事务。
 * [调整]配置文件格式调整为yaml，名称调整为esap.yml。解决配置(如密码)中包`'`号等特殊字符不识别问题。
-* [修复]更新wxtx.tpl，修复微信提醒加入top100后不能发提醒的bug。
+* [修复]更新wxtx.tpl，修复微信提醒加入top1000后不能发提醒的bug。
 
 ##### v2.7 destiny
 发布于`2017-5-9`
