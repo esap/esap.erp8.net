@@ -11,7 +11,7 @@
 <span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
 
 ##### 最新版本
-* 企业微信号版：<a href="./build/esap2.8_freedom_rc1.rar" target="_blank">v2.8 freedom rc1</a><span style="color:red"> new!</span>
+* 企业微信号版：<a href="./build/esap2.8_freedom_rc2.rar" target="_blank">v2.8 freedom rc2</a><span style="color:red"> new!</span>
 
 * 订阅服务号版：<a href="./build/esap2.8_freedom_rc1_pub.rar" target="_blank">v2.8 freedom rc1</a><span style="color:red"> new!</span>
 
@@ -74,7 +74,9 @@
 ##### v2.8 freedom!
 公测中^_^
 
-* [新增]admin模块重构归来，整合配置管理，新增日志管理等功能。
+* [调整]admin模块必须使用ES系统管理员用户身份的账号登陆。
+* [调整]admin模块增加分页显示，重启服务等功能，需先install服务。
+* [新增]admin模块重构归来，整合配置管理，新增日志管理等功能，支持IE9+,Google Chrome等现代浏览器。
 * [新增]微信提醒的pic和fh可以直接使用链接了，请修改字段长度以便更好的支持。
 * [新增]update接口增加key=file上传。
 * [修复]修复企业微信APP绑定失败的问题，secret需配置为APP应用的secret并添加可信域名。
