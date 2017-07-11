@@ -60,6 +60,8 @@
   <img src="./img/esap_pay.png" width="400">
 </p>
 
+**[捐赠玩家清单](donate.md)**
+
 #### ESAP部落微信公众号
 关注公众号，及时掌握最新动态 => ESAPbuluo ↓↓↓
 
