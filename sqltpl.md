@@ -6,7 +6,7 @@
 ## 什么是API
 * API是前后端分离后的一种后端服务，专注于提供数据访问，ESAP的API服务采用流行的json格式。
 
-* ESAP启动时，会自动建立`/api/*`,`/api2/*`,`/es/*`,`/es2/*`等API路由，APP和桌面版就是使用这些路由操作sql,包括数据查询和创建ES表单等功能。
+* ESAP启动时，会自动建立`/api/*`,`/api2/*`,`/es/*`,`/es2/*`等几组API路由，APP和桌面版就是使用这些路由调用sql模板,实现数据查询和创建ES表单等功能。
 
 ## 查询服务
 * 我们以APP的库存查询为例子演示sql模板的查询输出功能。
@@ -15,7 +15,7 @@
 
 ![](./img/sqlt1.png)
 
-* ESAP是如何从sql中获取数据的呢？实际上是搜索了sql/get/*.tpl中的`vlbq`模板，然后解析执行sql,返回结果集的json编码。
+* ESAP是如何获取数据的呢？实际上是搜索了`sql/get/*.tpl`中的`vlbq`模板，然后解析执行sql,返回结果集的json编码。
 
 ```sql
 { {define "vlbq"} }
@@ -27,7 +27,7 @@
 
 * 模板中的{ {.s} }执行时会替换成实际的请求参数s，也就是`手机`,所以最终执行的sql语句是：`select * from vlbq where 名 like '%手机%'`
 
-* 我们可以在浏览器直接输入`http://localhost:9090/api/vlbq?s=手机`,来感受一下这个数据的回传。
+* 我们可以在浏览器直接输入`http://localhost:9090/api/vlbq?s=手机`,来感受一下这个API数据的回传。
 
 ![](./img/sqlt2.png)
 
@@ -77,4 +77,5 @@ select '{ {$picno} }'
 |int64date|ESAP|将日期戳转换成日期，主要用于微信审批同步的日期处理|
 |int64datetime|ESAP|将日期戳转换成日期时间，主要用于微信审批同步的日期+时间处理|
 |getwechatname|ESAP|根据微信userid获取姓名|
-|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field string, spNum int64)|
+|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field, value)|
+|linkname|ESAP|使用linkno换取附件名|

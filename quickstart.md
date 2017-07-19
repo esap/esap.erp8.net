@@ -14,7 +14,7 @@
 
 ![](./img/s0-2.png)
 
-* 进入【企业应用】--【添加应用】--【创建应用】,进入该应用记录下`AgentId`和`Secret`
+* 进入【企业应用】--【创建应用】,进入该应用记录下`AgentId`和`Secret`
 
 ![](./img/s0-1.png)
 
@@ -34,9 +34,11 @@
 
 ![](./img/s0-3.png)
 
+<span style="color:red">注意：先保存ESAP配置，重启生效后再尝试保存企业微信应用的回调配置!</span>
+
 ## 更改高级配置
 
-* 完成首次配置保存后，会生成esap.yml配置文件，用Notepad++手工编辑可开启一些高级配置。
+* 完成首次配置保存后，会生成esap.yml配置文件，用[Notepad++](https://www.baidu.com/s?wd=notepadd%2B%2B)手工编辑可开启一些高级配置。
 
 ```yaml
  corpid: #你的企业号CorpID 

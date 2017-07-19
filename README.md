@@ -1,19 +1,19 @@
 <p align="center">
-  <img src="./img/logo.png" width="120">
+  <img src="./img/esapLinkAll.png">
 </p>
 
-## ES最佳实践
+## ESAP·连接一切
 凝聚ERP高级开发实践经验和持续成果的免费项目——ESAP服务器，来自村长的倾情奉献!
 
 #### [快速开始](s0.md)
 
 #### 重要通知
-<span style="color:red">目前企业号与企业微信正在逐步合并，请已升级到企业微信的用户尽量使用2.8+版本</span>
+* <span style="color:red">小程序通过ESAP与ES系统交互Demo全球首发:<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
 ##### 最新版本
-* 企业微信号版：<a href="./build/esap2.8_freedom_rc2.rar" target="_blank">v2.8 freedom rc2</a><span style="color:red"> new!</span>
+* 企业微信号版：<a href="./build/esap2.8_freedom_rc5.rar" target="_blank">v2.8 freedom rc5</a><span style="color:red"> new!</span>
 
-* 订阅服务号版：<a href="./build/esap2.8_freedom_rc1_pub.rar" target="_blank">v2.8 freedom rc1</a><span style="color:red"> new!</span>
+* 订阅服务号版：<a href="./build/esap2.8_freedom_rc5_pub.rar" target="_blank">v2.8 freedom rc5</a>
 
 > 注意：订阅服务号版回调必须是`加密模式`！
 
@@ -22,19 +22,21 @@
 
 |功能特性|订阅服务号版|企业微信版|备注|
 |:----:|:--:|:--:|:----|
-|微信查询|√|√| |
-|微信提醒|x|√| |
-|微信图库|√|√| |
-|微信签到|×|√| |
-|微信反馈|√|√| |
-|微信会话|×|√| |
-|Esmail|√|√| |
-|计划任务|√|√| |
-|查询特性：多重select|√|√| |
+|微信查询|√|√||
+|微信提醒|x|√||
+|微信图库|√|√||
+|微信签到|×|√||
+|微信反馈|√|√||
+|微信会话|×|√||
+|Esmail|√|√||
+|计划任务|√|√||
+|百度AI|×|√|身份证识别，银行卡识别等|
+|查询特性：多重select|√|√||
 |查询特性：使用mediaid|√|√|订阅服务号可使用永久素材id|
-|查询特性：分条返回|×|√| |
+|查询特性：返回文章|√|√||
+|查询特性：分条返回|×|√||
 |查询特性：系统变量|×|√|订阅服务号仅有一个系统变量，即openid|
-|查询特性：ES工作流|×|√| |
+|查询特性：ES工作流|×|√|表单新建，查看同理|
 
 ##### 其他版本
 * <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
@@ -76,6 +78,10 @@
 ##### v2.8 freedom!
 公测中^_^
 
+* [新增]微信查询新增文章返回能力，当URL不为空时触发。
+* [调整]微信自定义菜单扫描推事件改为绑定mkey了，即支持多种扫描推。
+* [修复]修复微信查询事务导致仅返回前7条的bug。
+* [调整]增加sqlt缓存，提升生产环境(debug=false)的API效率。
 * [调整]admin模块必须使用ES系统管理员用户身份的账号登陆。
 * [调整]admin模块增加分页显示，重启服务等功能，需先install服务。
 * [新增]admin模块重构归来，整合配置管理，新增日志管理等功能，支持IE9+,Google Chrome等现代浏览器。
