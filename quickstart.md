@@ -41,7 +41,7 @@
 * 完成首次配置保存后，会生成esap.yml配置文件，用[Notepad++](https://www.baidu.com/s?wd=notepadd%2B%2B)手工编辑可开启一些高级配置。
 
 ```yaml
- corpid: #你的企业号CorpID 
+ corpid: #你的企业号CorpID或公众号appId 
  secret: #你的管理组Secret
  txlsecret: #你的通讯录同步Secret
  token: #你的企业号应用回调统一token，随意填写

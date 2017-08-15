@@ -19,12 +19,14 @@ ESAP早已不再是一套ERP级的ES模板，而是一套完整的独立生态�
 > URL示例：`http://ESAP服务器IP:9090/api/action`
 
 #### ESAP-APP
-提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，demo源码开源在github.com/esap/app。
+提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，demo源码开源在https://github.com/esap/app。
 > URL示例：`http://ESAP服务器IP:9090/app`
 
+**[在线示例体验](https://m.esap.vip)**
+
 #### ESAP-Admin
-提供ESAP管理端的访问，部分公开发布。
-> URL示例：`http://ESAP服务器IP:9090/admin`
+提供ESAP管理端的访问，公开发布，源码开源在https://github.com/esap/admin。
+> URL示例：`http://ESAP服务器IP:19090/admin`
 
 #### ESAP-WebServer
 提供专门为ESAP设计的Webserver，模块化+插件式开发，动态编译，不依赖IIS，部署简单，所有配置一个配置文件(esap.yml)就搞定，已公开发布。
@@ -32,12 +34,14 @@ ESAP早已不再是一套ERP级的ES模板，而是一套完整的独立生态�
 #### ESAP-Desktop
 高级桌面端B/S架构，定制实现任何需求，例如打开门禁，连接地磅，或者是连接PLC显示生产线实时数据。
 
+**[在线示例体验](https://demo.esap.vip)**
+
 #### 微信API
-* 对接企业微信号的API，提供企业号应用接口功能，实现用户与ES对话式的交互，已公开发布。
+* 对接`企业微信、企业号`的API，提供企业号应用接口功能，实现用户与ES对话式的交互，已公开发布。
 
 > 回调URL示例：`http://ESAP服务器IP:9090/wx`
 
-* 对接微信订阅号、服务号的API，提供回调接口功能，实现用户与ES对话式的交互，已公开发布。
+* 对接微信`订阅号、服务号、小程序`的API，提供回调接口功能，实现用户与ES对话式的交互，已公开发布。
 
 > 回调URL示例：`http://ESAP服务器IP:9090/wxs`
 

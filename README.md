@@ -3,24 +3,29 @@
 </p>
 
 ## ESAP·连接一切
-凝聚ERP高级开发实践经验和持续成果的免费项目——ESAP服务器，来自村长的倾情奉献!
+ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连接一切的酷炫梦幻产品!
 
-#### [快速开始](s0.md)
+### [--快速开始--](quickstart.md)
 
 #### 重要通知
 * <span style="color:red">小程序通过ESAP与ES系统交互Demo全球首发:<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
-##### 最新版本
-* 企业微信号版：<a href="./build/esap2.8_freedom_rc5.rar" target="_blank">v2.8 freedom rc5</a><span style="color:red"> new!</span>
+##### 企业号版(企业微信)
+* <a href="./build/esap2.8freedom_x86.rar" target="_blank">v2.8freedom正式版x86</a>
 
-* 订阅服务号版：<a href="./build/esap2.8_freedom_rc5_pub.rar" target="_blank">v2.8 freedom rc5</a>
+* <a href="./build/esap2.8freedom_x64.rar" target="_blank">v2.8freedom正式版x64</a>
 
-> 注意：订阅服务号版回调必须是`加密模式`！
+##### 公众号版(订阅号/服务号/小程序)
+* <a href="./build/esap2.8freedom_pub_x86.rar" target="_blank">v2.8freedom正式版x86</a>
+
+* <a href="./build/esap2.8freedom_pub_x64.rar" target="_blank">v2.8freedom正式版x64</a>
+
+**注意：公众号回调必须使用`加密模式`！**
 
 ##### 版本功能差异
 由于微信限制，订阅服务号版仅能做有限的查询，与通讯录相关的功能不可用。
 
-|功能特性|订阅服务号版|企业微信版|备注|
+|功能特性|公众号版|企业号版|备注|
 |:----:|:--:|:--:|:----|
 |微信查询|√|√||
 |微信提醒|x|√||
@@ -38,25 +43,8 @@
 |查询特性：系统变量|×|√|订阅服务号仅有一个系统变量，即openid|
 |查询特性：ES工作流|×|√|表单新建，查看同理|
 
-##### 其他版本
-* <a href="./build/esap2.7destiny_x86.rar" target="_blank">v2.7destiny正式版x86</a>
-
-* <a href="./build/esap2.7destiny_x64.rar" target="_blank">v2.7destiny正式版x64</a>
-
-##### 文档&需求
-
-* 详细文档PDF版（by @淡淡风）：<a href="/build/ESAP微信版部署教程.pdf" target="_blank">ESAP微信版部署教程</a>
-
-* 欢迎提需求，[玩家需求实现进度](ref.md)
-
-##### 示例数据库
-
-* <a href="./db/esap2.0.rar" target="_blank">v2.8freedom</a>
-
-> ES 9.4.124; SQLSERVER 2008R2
-
 #### 捐赠
-维护这个项目需要大量时间和精力，如果它确实帮上了你的忙，不要忘了请我喝杯茶哦 :)
+维护这个项目需要大量时间和精力，如果它确实帮上了你的忙，不要忘了请村长喝杯茶哦 :)
 
 <p align="center">
   <img src="./img/esap_pay.png" width="400">
@@ -64,7 +52,7 @@
 
 **[捐赠玩家清单](donate.md)**
 
-#### ESAP部落微信公众号
+#### ESAP部落
 关注公众号，及时掌握最新动态 => ESAPbuluo ↓↓↓
 
 <p align="center">
@@ -76,7 +64,7 @@
 #### 更新日志
 
 ##### v2.8 freedom!
-公测中^_^
+发布于`2017-7-21`
 
 * [新增]微信查询新增文章返回能力，当URL不为空时触发。
 * [调整]微信自定义菜单扫描推事件改为绑定mkey了，即支持多种扫描推。
