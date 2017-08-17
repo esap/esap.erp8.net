@@ -33,7 +33,7 @@ dbname: esapp1
 ## mysql
 ```
 dbdriver: mysql
-dbport: 3308
+dbport: 3306
 server: localhost
 userid: root
 pwd: 123
