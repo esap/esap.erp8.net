@@ -15,7 +15,7 @@
 
 ![](./img/sqlt1.png)
 
-* ESAP是如何获取数据的呢？实际上是搜索了`sql/get/*.tpl`中的`vlbq`模板，然后解析执行sql,返回结果集的json编码。
+* ESAP是如何获取数据的呢？实际上是搜索了`sql/esap/*.get`中的`vlbq`模板，然后解析执行sql,返回结果集的json编码。
 
 ```sql
 { {define "vlbq"} }

@@ -1,49 +1,20 @@
 # 计划任务
-* 2.7版开始，新增了计划任务功能，目前包括两种用户计划任务和几种系统计划任务(微信提醒，esmail，通讯录同步，审批同步，打卡同步)：
+* 目前包括3种种用户计划任务和5种系统计划任务(微信提醒，esmail，通讯录同步，审批同步，打卡同步)：
 
  1. 查询任务QueryTask（select）
- 2. 执行任务ExecTask（update/insert/delete）
+ 2. 新闻任务QueryNewsTask（select）
+ 3. 执行任务ExecTask（update/insert/delete）
 
 ## 配置方式
-* 首先，到sql/get/task.tpl中编辑需要执行的sql模板
-
-* `查询任务ID`为三段式，分别代表:应用ID，接收人，唯一标识，用点号`.`分隔。
-
-* 企业小助手ID是0，接收人可用逗号`,`分隔多个，唯一标识随意填写，不重复为原则。
+* 首先，到sql/esap/task.get中编辑需要执行的sql模板
 
 ![](./img/task-1.png)
 
-* 其次，到根目录下修改task.json，可按需增加多条任务(tasks)项目,并与sql模板绑定。
+* 其次，到配置中新增开启这些计划，并选择类型，编辑周期，保存重启。
 
-```json
-{
-	"Global": {
-		"IsRun": true,         // 全局开关
-		"LogPath": "d:/"       // 日志路径
-	},
-	"Tasks": [
-		{
-			"Taskid": "21.w,wyl.kc",    // sql模板ID，每分钟会执行一次库存扫描并通过应用(ID=21)发微信消息送给用户`w,wyl`；
-			"TaskType": "cron",			
-			"Isrun": false,				// 局部开关
-			"Express": "0 */1 * * * *", // 秒，分，时，日，月，周(运行计划周期)
-			"Handlername": "QueryTask"	// 查询任务类型
-		},
-		{
-			"Taskid": "task.wxtx",		// 每天凌晨4点钟执行一次微信提醒置1任务，即忽略所有未发送成功的提醒。
-			"TaskType": "cron",
-			"Isrun": false,
-			"Express": "0 * 4 * * *",
-			"Handlername": "ExecTask"	// 执行任务类型	
-		}
-	]
-}
-```
+![](./img/task-2.png)
 
-**更改了任务计划配置task.json后，重启esap生效**
-
-
-## Express表达式详解
+## 周期(Express)表达式详解
 |字段|允许值|特殊字符值|
 |:----|:--:|:--:|
 |秒|0-59|, - * /|

@@ -2,8 +2,10 @@
 
 * [申请企业微信](#申请企业微信)
 * [设置企业应用](#设置企业应用)
-* [安装服务](#安装服务)
-* [启动配置](#启动配置)
+* [下载安装升级工具](#下载安装升级工具)
+* [启动服务配置](#启动服务配置)
+ - [首次配置](#首次配置)
+ - [非首次配置](#非首次配置)
 * [更改高级配置](#更改高级配置)
 
 ## 申请企业微信
@@ -18,53 +20,63 @@
 
 ![](./img/s0-1.png)
 
-* 点击【接收消息】--【设置】，可进入回调界面，暂停企业微信的设置，准备安装ESAP。
+* 点击【接收消息】--【设置】，可进入`回调界面`，暂停企业微信的设置，准备安装ESAP。
 
-## 安装服务
-* 从ESAP官方首页：[https://erp8.net/esap/](./README.md)下载最新的服务器文件包。
+## 下载安装升级工具
+* 从ESAP官方首页：[https://erp8.net/esap/](./README.md)下载esap-cli工具。
 
-* 解压下载的文件包，将其中`【微信提醒】`模板导入你的ES应用中。
+> 如果之前安装过ESAP，例如2.8版，请先备份好，再运行uninstall.bat卸载服务。
 
-> 注意，模板导入时可能会提示导入公式或工作流出错，这个是正常的，请无视。
+* 解压工具包，将其中的esap-cli.exe拷贝到需要安装（升级）esap的目录中，双击运行。
 
-## 启动配置
-* 双击esap.exe启动即可,首次启动后会自动进入配置界面，默认是:[localhost:9090/conf](https://localhost:9090/conf)
+![](./img/esap-cli.jpg)
 
-各参数配置示例如下：
+* esap-cli工具会自动检索下载最新版的esap并解压文件。
 
-![](./img/s0-3.png)
+> 如果使用ES系统，需将其中`【ESAP_提醒】`模板导入到你的ES应用中，模板导入时可能会提示公式或规范出错，请无视。
+
+## 启动服务配置
+* 双击install.bat安装服务启动esap服务后台。
+
+* 首次进入配置界面:[localhost:9090/admin](http://localhost:9090/admin)，账号：**admin**，密码：**erp8**
+
+#### 首次配置
+* 设置一个名为`esap`的微信主应用(必须)，建议企业号，完整填入其他参数（appid填前面申请的企业号corpid，AgentId和Secret填前面记下的，Token和EncodingAesKey可以使用示例配置也可以自己在回调界面生成，须一致），然后关闭“禁用”。
+
+* 可设置多个其他应用，应用名自拟唯一，若是公众号，类型填入pub，关闭“禁用”。
+
+* 设置一个名为`esap`的主数据库(必须)，若是ES建库，可导入ES模板，关闭“禁用”。
+
+* 可设置多个其他数据库，数据源名自拟唯一，关闭“禁用”。
+
+![](./img/firstCfg.png)
 
 <span style="color:red">注意：先保存ESAP配置，重启生效后再尝试保存企业微信应用的回调配置!</span>
 
+#### 非首次配置
+使用esap-cli升级后，用老配置(esap.yml)覆盖即可。
+
 ## 更改高级配置
 
-* 完成首次配置保存后，会生成esap.yml配置文件，用[Notepad++](https://www.baidu.com/s?wd=notepadd%2B%2B)手工编辑可开启一些高级配置。
+* 配置esap.yml可用[Notepad++](https://www.baidu.com/s?wd=notepadd%2B%2B)手工编辑，可开启一些高级配置。
 
 ```yaml
- corpid: #你的企业号CorpID或公众号appId 
- secret: #你的管理组Secret
- txlsecret: #你的通讯录同步Secret
- token: #你的企业号应用回调统一token，随意填写
- encodingAesKey:  #你的企业号应用回调统一EncodingAesKey
- agents:
-  1000002: "1000002的secret"  #多应用代理，可自行往下复制扩展
-  1000003: "1000003的secret"
- port: 9090  #ESAP服务端口
- wxtxTitle: 【ESAP提醒】  #微信提醒标题
- wxqdtitle: "" #微信签到标题
- needWxOAuth2: false
- host: www.erp8.net:12345 #ESAP外网IP(域名),不填端口号则使用port端口
- esweb: http://www.erp8.net:9999/esweb #ESweb外网页面
- server: . #数据库服务器，本机可填.号，完整示例：192.168.1.10/实例名,端口
- userId: sa #数据库用户名
- pwd: 123 #数据库密码
- dbName: esap #ES应用数据库，改成自己的库，例如esapp1
- retrymsg: false  #微信提醒失败重发开关，为true时开启
- showfunclist: false #微信查询未匹配时显示可用列表开关，为true时开启
- showfunclistenter: false #用户进入时显示可用列表开关，为true时开启
- debug: true #调试模式开关，为true时开启，log中输出调试详情
+staticpath: #静态文件目录
+- static
+- upload
+logpath: log/ #日志路径
+uploadpath: C:\Users\Administrator\Desktop\esap-cli-x64/upload #默认上传路径
+host: io.erp8.net:9090 #外网网址，阿里云可直接用IP，企业内网要做NAT
+port: "9090" #监听端口
+pwd: 777c43f12c5bd3f40d86b4fdf549e1f8 #管理台密码，md5，默认：erp8
+syncdelay: 200 #通讯录同步延时，最小100(毫秒)
+ises: true #使用ES应用库时设置true
+retrymsg: false #微信提醒失败重发开关，为true时开启
+entermsg: false #用户进入时显示可用列表开关，为true时开启
+needwxoauth2: false #进入app时自动认证身份(定制)
+debug: true #调试模式开关，为true时开启，log中输出调试详情
 ```
 
 > 注意，不推荐用windows的记事本编辑，可能会导致无法读取配置
 
-**2.8+版本可以通过admin模块可视化管理这些高级配置**
+**部分常用配置可以通过admin模块可视化管理**

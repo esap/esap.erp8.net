@@ -1,12 +1,11 @@
 # 微信超级查询
-* ESAP可快速对接微信公众号/企业号回调接口，自定义SQL语句，自定义权限，实现引擎式超级查询。
-* 依赖`微信查询` 模板。
-* 需开启微信公众号/企业号的回调模式，回调URL示例：
- - 企业号(企业微信)：ESAP服务器IP:9090/wx
- - 服务号(订阅号)：ESAP服务器IP:9090/wxs
+* ESAP提供了快速对接微信公众号/企业号的回调接口，自定义SQL语句，自定义权限，实现引擎式超级查询。
+* 需配置应用的token和EncodingAesKey，回调URL示例：
+ - 企业号(企业微信)：ESAP服务器IP:9090/wx/应用名
+ - 服务号(订阅号)：ESAP服务器IP:9090/wxs/应用名
 
 ## 微信查询原理
-* 系统根据用户输入的第一个关键字（例如下图的`库存`），扫描wxcx表中对应的sql，执行并返回结果。
+* 系统根据用户输入的第一个关键字（例如下图的`库存`），扫描esap_cx表中对应的sql，执行并返回结果。
 * 其他关键字被视为查询参数（例如下图中的`名`,`手机`），sql中可以使用`:p1,:p2`替换where条件。
 ```
 select 品号,名 as 品名,库存 from 库存表 where { {.p1} } like '%'+:p2+'%'
@@ -28,21 +27,18 @@ select 品号,名 as 品名,库存 from 库存表 where { {.p1} } like '%'+:p2+'
 - [扫码查询](#扫码查询)
 - [图片附件查询](#图片附件查询)
 - [回写数据](#回写数据)
-- [默认应用](#默认应用) 
-- [微信填报](#微信填报)
-- [菜单填报](#菜单填报)
-- [表单查询](#表单查询)
-- [待办列表打开](#待办列表打开)
+- [专用查询](#专用查询)
+- [菜单查询](#菜单查询)
 - [*数据字典](#数据字典)
 
 #### 新版特性 (2.8+)
 
 ##### 进入提示
-* esap配置showfunclistenter=true
+* esap配置entermsg=true
 
 * 企业号应用配置用户进入提醒
 
-* qCmts写select来作为进入提醒。
+* esap_cx表中的entermsg写select来作为进入提醒。
 
 ![](./img/s2-1.png)
  
@@ -63,7 +59,7 @@ select 品号,名 as 品名,库存 from 库存表 where { {.p1} } like '%'+:p2+'
 * \{\{uuid\}\} 对应一个全球唯一的id, 可用于构建自动编号。
 
 #### 动态模板
-* 2.6+支持模板语法，动态参数和动态sql
+* 支持golang模板语法，动态参数和动态sql
 
 **[点击这里参考更多用法](https://app.esap.vip/admin#/wxcx)**
 
@@ -105,7 +101,7 @@ select 品号,名 as 品名,库存 from 库存表 where { {.p1} } like '%'+:p2+'
 <img src="./img/8.15.png" width="240">
 
 #### 扫码查询
-二维码或其他条码等,wxcx表中的mkey与自定义菜单的扫码弹框菜单key对应即可
+二维码或其他条码等,esap_cx表中的mkey与自定义菜单的扫码弹框菜单key对应即可
 
 <img src="./img/8.16.png" width="240">
 <img src="./img/8.6.jpg" width="240">
@@ -122,17 +118,14 @@ sql结果字段或别名为`pic`或`图片`，`files`或`附件`
 > 注意微信限制：图片一般不能超过2M,附件不超过20M
 
 #### 回写数据
-isUpdate=1，sql中使用update或insert
+sql中使用update或insert，最后一句可使用select常量，例如：`select N'你的信息已成功提交，谢谢使用'`
 
 <img src="./img/8.24.jpg" width="240">
 ![](./img/8.23.png)
 
-> 2.5+
+#### 专用查询
+* 专用查询字段(app)为配置应用名（appName），查询不再需要关键字引导，也不再响应其他关键字，仅需输入参数就可查询。
 
-#### 默认应用
-* 查询名称(qName)为应用ID（agentId），查询不再需要关键字引导，仅需输入参数就可查询。
-
-![](./img/8.39.jpg)
 ![](./img/8.40.jpg)
 <img src="./img/8.38.jpg" width="240">
 
@@ -143,68 +136,30 @@ isUpdate=1，sql中使用update或insert
 <img src="./img/8.43.jpg" width="240">
 <img src="./img/8.44.jpg" width="240">
 
-> 2.7+，注意新增的应用，管理组要配置相应权限。
-
-#### 微信填报
-isUpdate=2，sql字段填模板名称
-
-<img src="./img/8.25.jpg" width="240">
-<img src="./img/8.26.jpg" width="240">
-
-> 2.5+，其他配置同[微信办理](./s3.md#微信办理)
-
-2.8+新增db字段，可多帐套填报。
-
-#### 菜单填报
+#### 菜单查询
 设置mkey，与企业号应用自定义菜单中的key一致。
 
 <img src="./img/8.27.jpg" width="320">
 <img src="./img/8.28.jpg" width="320">
 
-> 2.5+，其他配置同[微信办理](./s3.md#微信办理)
-
-#### 表单查询
-isUpdate=3，sql返回的第二个值为rcid
-
-<img src="./img/8.29.jpg" width="320">
-<img src="./img/8.30.jpg" width="320">
-<img src="./img/8.31.jpg" width="320">
-<img src="./img/8.32.jpg" width="320">
-
-> 2.6+，其他配置同[微信办理](./s3.md#微信办理)
-
-2.8+新增db字段，可多帐套查询。
-
-#### 待办列表打开
-设置一个自定义菜单，key为`dbsy`
-
-<img src="./img/8.33.jpg" width="320">
-<img src="./img/8.34.jpg" width="320">
-
-* 建议修改Esweb\main\todoViews.aspx，head下增加一个<meta>标签，以便适应移动访问，内容如下：
-
-```
-<meta name="viewport" content="width=device-width,initial-scale=1">
-```
-
-> 2.6+，其他配置同[微信办理](./s3.md#微信办理)
-
 ## 数据字典
-微信查询主要扫描`wxcx`表，对应字段解析如下：
+微信查询主要扫描`esap_cx`表，对应字段解析如下：
 
 |字段|描述|必填|备注|
 |:----:|:--:|:--:|:----|
 |mKey|微信自定义菜单id|否|绑定菜单id|
-|qName|查询名称|否|绑定查询第一个关键字；也可以绑定一个agentId|
-|qCmts|查询提醒|否|可以是一个select语句|
-|sqlStr|sql模板|是||
-|uid|用户权限|是|@all代表全体可用|
-|mediaOnly|仅媒体|否|1代表仅返回图片或附件|
-|isUpdate|ES表单模式|否||
-|db|数据库名称|否|跨账套表单模式|
+|name|查询名称|是|绑定查询第一个关键字|
+|entermsg|进入提醒|否|可以是一个select语句|
+|tmpl|sql模板|是||
+|aclUser|用户权限|否|@all代表全体可用|
+|aclDept|部门权限|否|逗号隔开多个ID或名称|
+|aclTag|标签权限|否|逗号隔开多个ID或名称|
+|mode|模式|否|1代表仅返回图片或附件|
+|app|专用查询|否|绑定一个配置的应用名|
+|db|数据库名称|否|跨账套|
 |url|文章URL|否|有值时返回文章|
 |pic|文章封面图片|否||
 |safe|保密消息模式|否|1表示保密|
-|id|自增编号|否|唯一|
+|ID|自增编号|否|唯一|
 
-* sql模板位置：sql/get/wxcx.tpl
+* sql模板位置：sql/esap/wxcx.get

@@ -4,9 +4,9 @@
 * [快速开始](quickstart.md)
  - [微信提醒](wxtx.md)
  - [微信查询](wxcx.md)
- - [微信会话](wxhh.md)
+<!-- - [微信会话](wxhh.md)-->
  - [增强功能](extra.md)
- - [微信权限](acl.md)
+<!-- - [微信权限](acl.md)-->
 * [计划任务](task.md)
  - [微信通讯录同步](txl.md)
  - [微信审批同步](wxsp.md)
