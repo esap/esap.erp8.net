@@ -9,8 +9,16 @@
 	    }
 	},
     
-    "plugins": ["splitter"],
+    "plugins": ["splitter","prism","-highlight"],
 	   
+	"pluginsConfig": {
+	  "prism": {
+	    "css": [
+	      "prismjs/themes/prism-solarizedlight.css"
+	    ]
+	  }
+	},
+	
     "styles": {
         "website": "styles/website.css",
 	    "ebook": "styles/ebook.css",

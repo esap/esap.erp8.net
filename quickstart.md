@@ -25,13 +25,11 @@
 ## 下载安装升级工具
 * 从ESAP官方首页：[https://erp8.net/esap/](./README.md)下载esap-cli工具。
 
-> 如果之前安装过ESAP，例如2.8版，请先备份好，再运行uninstall.bat卸载服务。
-
 * 解压工具包，将其中的esap-cli.exe拷贝到需要安装（升级）esap的目录中，双击运行。
 
 ![](./img/esap-cli.jpg)
 
-* esap-cli工具会自动检索下载最新版的esap并解压文件。
+* esap-cli工具会自动检索下载最新版的esap并安装服务。
 
 > 如果使用ES系统，需将其中`【ESAP_提醒】`模板导入到你的ES应用中，模板导入时可能会提示公式或规范出错，请无视。
 
@@ -54,7 +52,7 @@
 <span style="color:red">注意：先保存ESAP配置，重启生效后再尝试保存企业微信应用的回调配置!</span>
 
 #### 非首次配置
-使用esap-cli升级后，用老配置(esap.yml)覆盖即可。
+直接使用esap-cli升级即可。
 
 ## 更改高级配置
 
