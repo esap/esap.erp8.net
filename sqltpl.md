@@ -1,4 +1,4 @@
-# SQL模板
+# 数据API
 * 从2.7版开始，ESAP引入了sqlt库[github.com/it512/sqlt](https://github.com/it512/sqlt)作为sql操作的中间件。
 
 * 同时，村长在ESAP内部实现了许多自定义函数，使用ESAP的模板功能，你可以快速打造基于SQL的数据API。
