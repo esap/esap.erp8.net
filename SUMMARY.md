@@ -5,6 +5,7 @@
  - [微信提醒](wxtx.md)
  - [微信查询](wxcx.md)
 <!-- - [微信会话](wxhh.md)-->
+ - [多媒体库](mutimedia.md)
  - [增强功能](extra.md)
 <!-- - [微信权限](acl.md)-->
 * [计划任务](task.md)
@@ -14,7 +15,7 @@
 * [百度AI](bdai.md)
 * [数据API](sqltpl.md)
 * [图表API](echart.md)
-* [数据库兼管](feature.md)
+* [数据库驱动](feature.md)
 * [常见问题](qa.md)
 * [ESAP起源](his.md)
  - [第1章 一切从吐槽说起](c1.md)

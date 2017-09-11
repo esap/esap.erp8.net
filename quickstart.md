@@ -22,6 +22,8 @@
 
 * 点击【接收消息】--【设置】，可进入`回调界面`，暂停企业微信的设置，准备安装ESAP。
 
+> 回调URL设置参见[微信查询篇章](wxcx.md)
+
 ## 下载安装升级工具
 * 从ESAP官方首页：[https://erp8.net/esap/](./README.md)下载esap-cli工具。
 
@@ -34,22 +36,22 @@
 > 如果使用ES系统，需将其中`【ESAP_提醒】`模板导入到你的ES应用中，模板导入时可能会提示公式或规范出错，请无视。
 
 ## 启动服务配置
-* 双击install.bat安装服务启动esap服务后台。
+* 双击install.bat安装服务启动esap服务后台（使用esap-cli工具会自动执行此步）。
 
 * 首次进入配置界面:[localhost:9090/admin](http://localhost:9090/admin)，账号：**admin**，密码：**erp8**
 
 #### 首次配置
 * 设置一个名为`esap`的微信主应用(必须)，建议企业号，完整填入其他参数（appid填前面申请的企业号corpid，AgentId和Secret填前面记下的，Token和EncodingAesKey可以使用示例配置也可以自己在回调界面生成，须一致），然后打开“开关”。
 
-* 可设置多个其他应用，应用名自拟唯一，若是公众号，类型填入pub，打开“开关”。
+> 可设置多个其他应用，应用名自拟唯一，若是公众号，类型填入pub，打开“开关”。
 
 * 设置一个名为`esap`的主数据库(必须)，若是ES建库，可导入ES模板，打开“开关”。
 
-* 可设置多个其他数据库，数据源名自拟唯一，打开“开关”。
+> 可设置多个其他数据库，数据源名自拟唯一，打开“开关”。
 
 ![](./img/firstCfg.png)
 
-<span style="color:red">注意：先保存ESAP配置，重启生效后再尝试保存企业微信应用的回调配置!</span>
+<span style="color:red">注意：先保存ESAP配置，重启服务生效后再尝试保存企业微信应用的回调配置!</span>
 
 #### 非首次配置
 直接使用esap-cli升级即可。
@@ -63,7 +65,7 @@ staticpath: #静态文件目录
 - static
 - upload
 logpath: log/ #日志路径
-uploadpath: C:\Users\Administrator\Desktop\esap-cli-x64/upload #默认上传路径
+uploadpath: D:\esap-cli-x64/upload #默认上传路径
 host: io.erp8.net:9090 #外网网址，阿里云可直接用IP，企业内网要做NAT
 port: "9090" #监听端口
 pwd: 777c43f12c5bd3f40d86b4fdf549e1f8 #管理台密码，md5，默认：erp8
@@ -75,6 +77,6 @@ needwxoauth2: false #进入app时自动认证身份(定制)
 debug: true #调试模式开关，为true时开启，log中输出调试详情
 ```
 
-> 注意，不推荐用windows的记事本编辑，可能会导致无法读取配置
+> 注意，不要用windows的记事本编辑，可能会导致无法读取配置
 
-**部分常用配置可以通过admin模块可视化管理**
+**常用配置可以通过admin模块可视化管理**
