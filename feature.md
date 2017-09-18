@@ -12,60 +12,60 @@ ESAP整合了多种数据库驱动，可以连接大部分数据库，部分示�
 
 ## SqlServer 2005+
 ```
-dbdriver: mssql
-dbport: 1433
-server: localhostq
-userid: sa
+driver: mssql
+port: 1433
+server: localhost
+user: sa
 pwd: 123
-dbname: esapp1
+db: esapp1
 ```
 
 ## SqlServer 2000
 ```
-dbdriver: sql2000
-dbport: 1433
+driver: sql2000
+port: 1433
 server: localhost
-userid: sa
+user: sa
 pwd: 123
-dbname: esapp1
+db: esapp1
 ```
 
 ## mysql
 ```
-dbdriver: mysql
-dbport: 3306
+driver: mysql
+port: 3306
 server: localhost
-userid: root
+user: root
 pwd: 123
-dbname: dbName
+db: db
 ```
 
 ## postgresql
 ```
-dbdriver: postgres
-dbport: 5432
+driver: postgres
+port: 5432
 server: localhost
-userid: postgres
+user: postgres
 pwd: 123
-dbname: dbName
+db: db
 ```
 
 ## sqlite
 ```
-dbdriver: sqlite
-dbname: "d:\\mydb.db"
+driver: sqlite
+db: "d:\\mydb.db"
 ```
 
 ## access
 ```
-dbdriver: access
-dbname: "d:\\mydb.mdb"
+driver: access
+db: "d:\\mydb.mdb"
 ```
 
 ## excel
 ```
-dbdriver: excel
-dbname: "d:\\mydb.xls"
+driver: excel
+db: "d:\\mydb.xls"
 ```
 
 ## 驱动企业平台
