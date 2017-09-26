@@ -1,5 +1,5 @@
 # 部署ESAP服务
-**注意，esap2.8版开始整合了nssm,可以通过双击install.bat以及uninstall.bat实现服务一键安装和卸载。**
+**注意，esap-cli工具会自动封装esap服务，本章仅供原理分析**
 
 在生产环境中，esap可以使用nssm封装为服务，从而实现开机自动运行和崩溃自动重启。
 
