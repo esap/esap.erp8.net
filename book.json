@@ -11,6 +11,9 @@
     
     "plugins": ["splitter"],
 	   
+	"pluginsConfig": {
+	},
+	
     "styles": {
         "website": "styles/website.css",
 	    "ebook": "styles/ebook.css",
