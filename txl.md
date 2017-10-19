@@ -14,19 +14,19 @@
 ## *自定义通讯录同步[高级教程]
 * esap强大的sql模板功能，允许用户自定义通讯录表，从而实现任何基于sql的系统组织架构同步。
 
-* 具体实现步骤非常简单，找到sql/esap/task.get使用notepad++进行编辑
+* 具体实现步骤非常简单，在admin中配置脚本前缀，例如`fabe.`，然后在sql/esap目录下建立自己的*.get脚本，例如fabe_txl.get,使用notepad++进行编辑
 
-* 将其中的`sync.dept`，`sync.user`，`sync.tag`,`sync.taguser`四个模板，指向其他自定义数据表，并保证输出字段一致即可。
+* 在其中建立带`fabe.`前缀的`fabe.sync.dept`，`fabe.sync.user`，`fabe.sync.tag`,`fabe.sync.taguser`四个模板，指向其他自定义数据表，并保证输出字段一致即可。
 
 * 更改示例：(部门同步改到`我的部门表`，用户同步改到`我的用户表`)
 
 ```
-{ {define "sync.dept"} }
+{ {define "fabe.sync.dept"} }
 SELECT name, id, parentid, Order1
 FROM 我的部门表
 { {end} }
 
-{ {define "sync.user"} }
+{ {define "fabe.sync.user"} }
 SELECT userid, name, mobile, dept, position, Email FROM 我的用户表
 { {end} }
 ```
