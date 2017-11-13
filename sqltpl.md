@@ -84,3 +84,4 @@
 |getwechatname|ESAP|根据微信userid获取姓名|
 |checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field, value)|
 |linkname|ESAP|使用linkno换取附件名|
+|sendtext|ESAP|发送消息，原型是SendMsg(appname, touser, content)|
