@@ -12,6 +12,7 @@
  - [微信通讯录同步](txl.md)
  - [微信审批同步](wxsp.md)
  - [微信打卡同步](wxdk.md)
+* [腾讯云短信平台](txsms.md)
 * [百度AI](bdai.md)
 * [数据API](sqltpl.md)
 * [图表API](echart.md)
