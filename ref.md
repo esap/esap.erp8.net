@@ -80,6 +80,6 @@
 
 
 ## 加入社区，打开脑洞^_^
-* 您可以加入ESAP部落，与大家一起分享讨论：QQ群[275205931](http://shang.qq.com/wpa/qunwpa?idkey=8065d28ea0b39649052de5d2aeab377014d268a5a9fa7463d4873b205233aaff) <<点击加入
+* 您可以加入ESAP达摩院，与大神们一起分享讨论：QQ群[275205931](http://shang.qq.com/wpa/qunwpa?idkey=8065d28ea0b39649052de5d2aeab377014d268a5a9fa7463d4873b205233aaff) <<点击加入
 
 * 注意：为了创造更好的交流环境，本群设置了收费进入，适当提高门槛以防广告&闲杂人员进入。

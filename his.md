@@ -9,23 +9,23 @@
 
 * ESAP起源于2012年，最初由勤哲Excel服务器（ES）实现的，后来又借鉴汲取了著名的ERP系统——SAP R3的架构思想进行了重构。因此拥有了ES的灵活与SAP的强大。
 
-* ESAP在过去的5年积攒沉淀了许多优秀的思想和技术，甚至超越了ES官方的更新速度，例如：2012年，ESAP就实现了模板级导航并用于生产，ES2013版才推出导航功能，并一直bug不断；2015年，ESAP配合golang实现了与微信对接，ES2016版才推出一个半成品的微信端，2017年，ESAP实现了百度AI等多种云服务集成。
+* ESAP在过去的5年积攒沉淀了许多优秀的思想和技术，包括：2012年，ESAP就实现了模板级导航并用于生产；2015年，ESAP配合golang实现了与微信对接；2017年，ESAP实现了百度AI，腾讯云，阿里云等多种云服务集成。
 
 ## ESAP项目构成
-ESAP早已不再是一套ERP级的ES模板，而是一套完整的独立生态，现在ESAP主要包括以下模块：
+ESAP是一套完整的独立生态，现在ESAP主要包括以下模块：
 
 #### ESAP-API
 对接SQL的restfulAPI容器，无需任何二次开发，只要写写sql模板即可快速堆建你的专用数据API，已公开发布。
 > URL示例：`http://ESAP服务器IP:9090/api2/action`
 
 #### ESAP-APP
-提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，demo源码开源在https://github.com/esap/app。
+提供ESAP移动端的访问，ESAP-APP采用了当下流行的Vue组件构建前端，提供了迅速定制实现任何复杂UI的可能，demo源码开源在https://github.com/esap/app
 > URL示例：`http://ESAP服务器IP:9090/app`
 
 **[在线示例体验](https://m.esap.vip)**
 
 #### ESAP-Admin
-提供ESAP管理端的访问，公开发布，源码开源在https://github.com/esap/admin。
+提供ESAP管理端的访问，公开发布，源码开源在https://github.com/esap/admin
 > URL示例：`http://ESAP服务器IP:9090/admin`
 
 #### ESAP-WebServer
@@ -49,10 +49,10 @@ ESAP早已不再是一套ERP级的ES模板，而是一套完整的独立生态�
 驱动ESAP微信应用的主数据库，已公开发布。
 
 #### ES-API
-对接ES库的专用API，不同于ESWEB，ES-API除了提供ES数据访问、还提供图片、附件访问，甚至包括官方没有的缩略图等接口功能，已公开发布。
+对接ES库的专用API，不同于ESWEB，ES-API除了提供ES数据访问、还提供图片、附件访问，甚至包括ES官方没有的缩略图等接口功能，已公开发布。
 > URL示例：`http://ESAP服务器IP:9090/es/action`
 
-** 尽管看起来模块非常多，实际部署时仅仅只需要运行esap-cli，进入admin模块配置一下就可以了，就是这么简单! **
+** 尽管看起来模块非常多，实际部署时仅仅只需要运行esap-cli，再登陆admin模块配置一下就可以了，就是这么简单! **
 
 ## ESAP的哲学
 Easy Simple And Powerful，简单就是美，这个借口可以用一万年!
