@@ -16,6 +16,8 @@
 
 * 具体实现步骤非常简单，在admin中配置脚本前缀，例如`fabe.`，然后在sql/esap目录下建立自己的*.get脚本，例如fabe_txl.get,使用notepad++进行编辑
 
+![](./img/txl-3.png)
+
 * 在其中建立带`fabe.`前缀的`fabe.sync.dept`，`fabe.sync.user`，`fabe.sync.tag`,`fabe.sync.taguser`四个模板，指向其他自定义数据表，并保证输出字段一致即可。
 
 * 更改示例：(部门同步改到`我的部门表`，用户同步改到`我的用户表`)
