@@ -27,13 +27,15 @@
 
 * 更改示例：(部门同步改到`我的部门表`，用户同步改到`我的用户表`)
 
-```
-{ {define "fabe.sync.dept"} }
+{% raw %}
+```sql
+{{define "fabe.sync.dept"}}
 SELECT name, id, parentid, Order1
 FROM 我的部门表
-{ {end} }
+{{end}}
 
-{ {define "fabe.sync.user"} }
+{{define "fabe.sync.user"}}
 SELECT userid, name, mobile, dept, position, Email FROM 我的用户表
-{ {end} }
+{{end}}
 ```
+{% endraw %}

@@ -19,23 +19,25 @@
 
 ## 使用示例
 * 首先需要在sql/chart目录下建立后缀为.get的sql模板，例如建立一个`sales.get`，示例代码如下：
-	
-	{\{define "销售"}\}
+{% raw %}
+```sql
+{{define "销售"}}
 	
 	select 制单, sum(ISNULL(应收合计,0)) 七月 from 内销 --系列1
 	
-	where year(交货日期)={\{.p0}\} and month(交货日期)=7
+	where year(交货日期)={{.p0}} and month(交货日期)=7
 
 	group by 制单
 	
 	select 制单, sum(ISNULL(应收合计,0)) 八月 from 内销 --系列2
 	
-	where year(交货日期)={\{.p0}\} and month(交货日期)=8
+	where year(交货日期)={{.p0}} and month(交货日期)=8
 	
 	group by 制单
 	
-	{\{end}\}
-
+{{end}}
+```
+{% endraw %}
 
 * 示例定义了一个名为`销售`的sql模板，用来查询七、八月的销售业绩，其中有一个`p0`参数用来区分年份，当我们访问`http://host/chart?tp=bar&tt=ESAP图表&id=销售&wd=2017`时就可以看到下列图表。
 

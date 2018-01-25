@@ -42,25 +42,27 @@
 ![](./img/wxsp7.png)
 
 ## 代码注释
+{% raw %}
 ```sql
-{ {define "缺勤表.wxsp"} } --定义sql模板【缺勤表.wxsp】
+{{define "缺勤表.wxsp"}} --定义sql模板【缺勤表.wxsp】
   if not exists (select * from 缺勤表 where spnum=:SpNum)   --检查审批流水号SpNum是否存在，SpNum是`微信审批`系统变量
   begin
 	insert
 		缺勤表(学号,课程,日期,制表,记录日期,spnum,spstatus,excelserverrcid,excelserverrtid)  --插入主表记录
 	select
-		'{ {.学号} }',   --对应企业微信的学号，以下带花括号的变量同理
-		'{ {.课程} }',
-		'{ {.日期} }',
+		'{{.学号}}',   --对应企业微信的学号，以下带花括号的变量同理
+		'{{.课程}}',
+		'{{.日期}}',
 		:ApplyName,   --申请人姓名，微信审批系统变量
-		'{ {.制单日期} }',
+		'{{.制单日期}}',
 		:SpNum,       --审批编号，微信审批系统变量
 		:SpStatus,    --审批状态，微信审批系统变量
 		:rcid,:rtid   --rcid,rtid，esap系统变量
-  { {template "repcase"} }    --插入Es_repcase记录，用于ES工作台显示
+  {{template "repcase"}}    --插入Es_repcase记录，用于ES工作台显示
   end
-{ {end} }
+{{end}}
 ```
+{% endraw %}
 
 ## 微信审批系统变量全解
 ```
