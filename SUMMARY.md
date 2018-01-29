@@ -2,11 +2,13 @@
 
 * [首页](README.md)
 * [快速开始](quickstart.md)
- - [微信提醒](wxtx.md)
- - [微信查询](wxcx.md)
+* [微信提醒](wxtx.md)
+* [微信查询](wxcx.md)
+ - [语法特性](wxcx1.md)
+ - [特性支持](wxcx2.md)
 <!-- - [微信会话](wxhh.md)-->
- - [多媒体库](mutimedia.md)
- - [增强功能](extra.md)
+* [多媒体库](mutimedia.md)
+* [增强功能](extra.md)
 <!-- - [微信权限](acl.md)-->
 * [计划任务](task.md)
  - [微信通讯录同步](txl.md)

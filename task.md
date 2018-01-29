@@ -1,16 +1,18 @@
 # 计划任务
-* 目前包括3种种用户计划任务和5种系统计划任务(微信提醒，esmail，通讯录同步，审批同步，打卡同步)：
+* 目前包括3种【用户计划任务】：
 
  1. 查询任务QueryTask（select）
  2. 新闻任务QueryNewsTask（select）
  3. 执行任务ExecTask（update/insert/delete）
 
+* 和5种【系统计划任务】：微信提醒，esmail，通讯录同步，审批同步，打卡同步：
+
 ## 配置方式
-* 首先，到sql/esap/task.get中编辑需要执行的sql模板
+* 首先，建立一个sql/esap/XXX.get模板文件(ke复制修改task.get)，编辑需要执行的sql模板
 
 ![](./img/task-1.png)
 
-* 其次，到配置中新增开启这些计划，并选择类型，编辑周期，保存重启。
+* 然后，到配置中新增开启这些计划，并选择类型，编辑周期，保存重启即可。
 
 ![](./img/task-2.png)
 
