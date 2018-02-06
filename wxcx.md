@@ -1,12 +1,10 @@
 # 微信超级查询
 * ESAP提供了快速对接微信公众号/企业号的回调接口，自定义SQL语句，自定义权限，实现引擎式超级查询。
 * 需配置应用的token和EncodingAesKey，回调URL规则：
- - 企业号(企业微信)：`http://外网host/wx/应用名`
- - 服务号(订阅号)：`http://外网host/wxs/应用名`
+	`http://外网host/wx/应用名`
 
 例如，假设外网域名是io.erp8.net，9090端口映射到内网ESAP服务器，那么回调URL如下:
- - 企业号：`http://io.erp8.net:9090/wx/esap`
- - 服务号：`http://io.erp8.net:9090/wxs/esap`
+	`http://io.erp8.net:9090/wx/esap`
 
 > 注意，公众号(服务号/订阅号)必须使用80端口，如无80端口可以用nginx或caddy做反向代理。
 
