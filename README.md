@@ -12,6 +12,8 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 
 * <span style="color:red">小程序通过ESAP与ES系统交互Demo全球首发:<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
+* <span style="color:red">技术讨论QQ群(ESAP-达摩院)：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入</span>
+
 ##### ESAP下载工具
 * <a href="./build/esap-cli-x64.zip" target="_blank">esap-cli-x64版</a>
 
