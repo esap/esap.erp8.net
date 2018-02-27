@@ -30,12 +30,12 @@
 {% raw %}
 ```sql
 {{define "fabe.sync.dept"}}
-SELECT name, id, parentid, Order1
-FROM 我的部门表
+	SELECT name, id, parentid, Order1 FROM 我的部门表
 {{end}}
 
 {{define "fabe.sync.user"}}
-SELECT userid, name, mobile, dept, position, Email FROM 我的用户表
+	SELECT userid, name, mobile, dept, position, Email, telephone, isleader, englishname, gender 
+	FROM 我的用户表
 {{end}}
 ```
 {% endraw %}
