@@ -84,13 +84,13 @@
 |uuid|ESAP|唯一机器编码，类似GUID|
 |newrcid|ESAP|调用GetNewId_s获取ES新rcid|
 |newpicno|ESAP|调用GetNewId_s获取ES新picNo|
-|newlinkno|ESAP|调用GetNewId_s获取ES新linkNo|
+|newlinkno|ESAP|调用GetNewId_s获取  ES新linkNo|
 |rtid|ESAP|传入模板名称获取rtid|
 |addpic|ESAP|插入指定url的图片到特定表单字段，下载图片到网盘，原型是 DownloadPic(picUrl, tableName, fieldName, rcid, picNo)|
 |addlink|ESAP|插入指定url的文件到特定表单字段，下载文件到网盘，原型是 DownloadFile(picUrl, filename, tableName, fieldName, rcid, linkNo)|
 |int64date|ESAP|将日期戳转换成日期，主要用于微信审批同步的日期处理|
 |int64datetime|ESAP|将日期戳转换成日期时间，主要用于微信审批同步的日期+时间处理|
 |getwechatname|ESAP|根据微信userid获取姓名|
-|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(table, field, value)|
+|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(db, table, field, value)|
 |linkname|ESAP|使用linkno换取附件名|
 |sendtext|ESAP|发送消息，原型是SendMsg(appname, touser, content)|

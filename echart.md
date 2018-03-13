@@ -7,15 +7,16 @@
 
 ## 如何使用
 * 图表API的完整访问地址为
-	`http://host/chart?tp=图表类型&tt=标题&id=模板ID&wd=查询条件&y=0`。
+	`http://host/chart?tp=图表类型&tt=标题&id=模板ID&wd=查询条件&y=0tmp=`。
 
 |URL参数|含义|是否必填|可选值|
 |:----:|:--:|:--:|:----|
 |tp|图表类型|否|line,bar,pie(线，柱，饼)|
 |tt|图表标题|否||
-|id|模板ID|是||
+|id|sql模板ID|是||
 |wd|查询条件|否|跟微信查询一样，逗号或空格分隔|
 |y|分类转置|否|=1时分类显示在Y轴|
+|tmp|htm模板ID|否|默认使用/view/chart.html,置1为chart1.html,以此类推|
 
 ## 使用示例
 * 首先需要在sql/chart目录下建立后缀为.get的sql模板，例如建立一个`sales.get`，示例代码如下：
