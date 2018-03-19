@@ -61,6 +61,8 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [调整]变更jwt认证方式，原url参数认证改为header认证(Authorization + Bearer)。
+* [调整]esap-admin使用iview-admin作为基础架构。
 * [新增]图表URL新增tmp参数，以便支持自定义html模板。例如，默认使用/view/chart.html模板，当tmp=1时，使用chart1.html模板。
 * [修复]修复微信OA接口下载，原`ESAP_审批`模板拆分成`请假`，`报销`模板，并且所有脚本名称统一使用`模板名.wxsp`格式。
 * [新增]新增百度AI车牌号识别、票据识别、营业执照识别和存入数据库。
