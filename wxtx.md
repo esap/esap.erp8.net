@@ -133,5 +133,19 @@ END
 |title|卡片消息标题|否|仅企业微信端支持|
 |url|卡片消息链接|否|仅企业微信端支持|
 
-## 其他事项
-sql模板位置：sql/esap/wxtx.get, 默认使用`top 1000`防止API超限。
+## *[高级教程]自定义提醒
+提醒查询sql模板位置：sql/esap/wxtx.get, 默认使用`top 1000`防止API超限。
+
+提醒成功后的回写sql模板位置：sql/esap/wxtx.put。
+
+sql模板可加入后缀，进行自定义，具体步骤：
+
+* 自建sql模板文件，例如建立sql/esap/mytx.get和sql/esap/mytx.put
+
+* 参考原模板，定义新sql模板，例如mytx.get文件中定义`wxtx.my`，`wxtxd.my`，mytx.put文件中定义`wxtx.my`，输出字段与原模板一致。
+
+* 在计划任务中新增一个提醒任务，备注中填入`.my`，完成后保存重启。
+
+![](./img/wxtx.jpg)
+
+* 新提醒任务会使用wxtx.my等新脚本进行提醒扫描，可实现基于自定义表的自定义提醒。

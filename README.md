@@ -61,6 +61,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]新增微信提醒后缀配置，可通过配置后缀实现基于自定义表的微信提醒。
 * [调整]变更jwt认证方式，原url参数认证改为header认证(Authorization + Bearer)。
 * [调整]esap-admin使用iview-admin作为基础架构。
 * [新增]图表URL新增tmp参数，以便支持自定义html模板。例如，默认使用/view/chart.html模板，当tmp=1时，使用chart1.html模板。
