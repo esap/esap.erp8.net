@@ -43,15 +43,17 @@
 * 首次进入配置界面:[localhost:9090/admin](http://localhost:9090/admin)，账号：**admin**，密码：**erp8**
 
 #### 首次配置
-* 设置一个名为`esap`的微信主应用(必须)，建议企业号，完整填入其他参数（appid填前面申请的企业号corpid，AgentId和Secret填前面记下的，Token和EncodingAesKey可以使用示例配置也可以自己在回调界面生成，须一致），然后打开“开关”。
+* 设置应用名(appName)为`esap`的微信主应用(必须)，建议企业号，完善其他参数（appid填前面申请的企业号corpid，AgentId和Secret填前面记下的，Token和EncodingAesKey可以使用示例配置也可以自己在回调界面生成，须一致），然后打开“开关”，保存重启。
 
-> 可设置多个其他应用，应用名自拟唯一，若是公众号，类型填入pub，打开“开关”。
+![](./img/esapCfg-1.jpg)
 
-* 设置一个名为`esap`的主数据库(必须，建议sql2005+)，若是ES建库，可导入ES模板，打开“开关”。
+> 可设置多个其他应用，应用名自拟唯一
 
-> 可设置多个其他数据库，数据源名自拟唯一，打开“开关”。
+* 设置数据源名(dbName)为`esap`的主数据库(必须，sql2005+)，若是ES建库，可导入ES模板，打开“开关”，保存重启。
 
-![](./img/firstCfg.png)
+![](./img/esapCfg-2.jpg)
+
+> 可设置多个其他数据库，数据源名自拟唯一
 
 <span style="color:red">注意：先保存ESAP配置，重启服务生效后再尝试保存企业微信应用的回调配置!</span>
 

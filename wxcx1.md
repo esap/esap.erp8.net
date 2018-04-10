@@ -39,3 +39,6 @@ insert xxx(...) values(...)
 ...
 select N'你的信息已成功提交，谢谢使用'
 ```
+
+<img src="./img/8.24.jpg" width="240">
+![](./img/8.23.png)

@@ -1,21 +1,21 @@
 # SQL模板
-* 从2.7版开始，ESAP引入了sqlt库[github.com/it512/sqlt](https://github.com/it512/sqlt)作为sql操作的中间件。
+* 从2.7版开始，ESAP引入了[sqlt库](https://github.com/it512/sqlt)作为sql操作的中间件。
 
-* 同时，村长在ESAP内部实现了许多自定义函数，使用ESAP的模板功能，你可以快速打造基于SQL的数据API。
+* 同时，村长在ESAP内部实现了许多自定义函数，使用sql模板，你可以快速打造基于SQL的数据API。
 
 ## 什么是API
 * API是前后端分离后的一种后端服务，专注于提供数据访问，ESAP的API服务采用流行的json格式。
 
-* ESAP启动时，会自动建立`/api/*`,`/api2/*`,`/es/*`,`/es2/*`等几组API路由，APP和Admin模块就是使用这些路由调用sql模板,实现数据查询和创建ES表单等功能。
+* ESAP启动时，会自动建立`/api/*`,`/api2/*`,`/es/*`,`/es2/*`等几组API路由，APP和Admin等扩展功能就是使用这些api,实现数据查询和创建ES表单等功能。
 
 ## 查询服务
-* 我们以APP的库存查询为例子演示sql模板的查询输出功能。
+* 我们以APP的库存查询为例演示sql模板的查询输出功能。
 
 * 在APP的库存查询搜索框输入`手机`时，前端(APP)就会向后端(ESAP)发起一个GET请求，请求地址是`/api2/vlbq?s=手机`,然后ESAP返回数据，APP展示数据。
 
 ![](./img/sqlt1.png)
 
-* ESAP是如何获取数据的呢？实际上是搜索了`sql/api2/*.get`中的`vlbq`模板，然后解析执行sql，返回结果集的json编码，下面是模板定义。
+* ESAP是如何获取SQL数据的呢？实际上，根据请求参数执行了`sql/api2/*.get`中的`vlbq`模板，然后返回sql查询结果，下面是模板定义。
 {% raw %} 
 ```sql
 {{define "vlbq"}}	
@@ -23,13 +23,13 @@
 {{end}}
 ```
 {% endraw %} 
-* 这个模板十分简单，有助于我们熟悉了解模板语法，首先用define定义了vlbq这个sql模板，尾部用end结束,模板中的请求参数用双花括号包裹。
+* 这个模板十分简单，有助于我们熟悉了解模板语法，首先用`define`定义了`vlbq`这个sql模板，尾部用`end`结束,模板中的请求参数用双花括号包裹。
 
 * 模板中的{\{.s}\}执行时会替换成实际的请求参数s，也就是`手机`,所以最终执行的sql语句是：
 ```sql
 	select * from vlbq where 名 like '%手机%'
 ```
-* 我们可以在浏览器直接输入`http://localhost:9090/api2/vlbq?s=手机`,来感受一下这个API数据的回传。
+* 我们可以在浏览器直接输入`http://localhost:9090/api2/vlbq?s=手机`,来感受一下这个API数据回传。
 
 ![](./img/sqlt2.png)
 
@@ -55,7 +55,7 @@
 ```
 {% endraw %}
 
-* 例如我们要产生一个新的图片picNo就可以直接这样写：
+* 例如我们要产生一个新的图片picNo，就可以直接这样写：
 {% raw %}
 ```sql
 	declare @picNo nvarchar(20)
@@ -74,7 +74,8 @@
 	select '{{$picno}}'
 ```
 {% endraw %}
-## *实用自定义函数[高级教程]
+
+## *常用自定义函数[高级教程]
 |函数名称|类型|说明|
 |:----:|:--:|:--:|
 |and|标准|and 条件|

@@ -19,28 +19,22 @@
 |tmp|htm模板ID|否|默认使用/view/chart.html,置1为chart1.html,以此类推|
 
 ## 使用示例
-* 首先需要在sql/chart目录下建立后缀为.get的sql模板，例如建立一个`sales.get`，示例代码如下：
+* 首先建立`sql/chart/sales.get`文件，定义sql模板的代码如下：
 {% raw %}
 ```sql
-{{define "销售"}}
-	
-	select 制单, sum(ISNULL(应收合计,0)) 七月 from 内销 --系列1
-	
+{{define "销售"}}	
+	select 制单, sum(ISNULL(应收合计,0)) 七月 from 内销 --系列1	
 	where year(交货日期)={{.p0}} and month(交货日期)=7
-
 	group by 制单
 	
-	select 制单, sum(ISNULL(应收合计,0)) 八月 from 内销 --系列2
-	
-	where year(交货日期)={{.p0}} and month(交货日期)=8
-	
-	group by 制单
-	
+	select 制单, sum(ISNULL(应收合计,0)) 八月 from 内销 --系列2	
+	where year(交货日期)={{.p0}} and month(交货日期)=8	
+	group by 制单	
 {{end}}
 ```
 {% endraw %}
 
-* 示例定义了一个名为`销售`的sql模板，用来查询七、八月的销售业绩，其中有一个`p0`参数用来区分年份，当我们访问`http://host/chart?tp=bar&tt=ESAP图表&id=销售&wd=2017`时就可以看到下列图表。
+* 示例定义了名为`销售`的sql模板，用来查询七、八月的销售业绩，其中有一个`p0`参数用来区分年份，当我们访问`http://host/chart?tp=bar&tt=ESAP图表&id=销售&wd=2017`时就可以看到下列图表。
 
 ![](./img/chart-1.jpg)
 
@@ -48,7 +42,7 @@
 
 ![](./img/chart-2.jpg)
 
-## *微信查询图表[高级教程]
+## 微信查询图表
 
 * 配置一个微信查询，原文链接使用参数路径，注意这里传入的是`p1`，示例如下。
 
@@ -59,4 +53,7 @@
 <img src="./img/chart-4.jpg" width="320">
 <img src="./img/chart-5.jpg" width="320">
 
+## 自定义图表模板
+图表URL的tmp参数可以导向不同的html模板。
 
+例如，默认使用/view/chart.html模板，当tmp=1时，使用chart1.html模板，以此类推。

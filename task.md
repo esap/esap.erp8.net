@@ -1,22 +1,40 @@
 # 计划任务
-* 目前包括3种【用户计划任务】：
+* 目前主要包括3种【用户任务】：
 
  1. 查询任务`QueryTask`（select）
  2. 新闻任务`QueryNewsTask`（select）
  3. 执行任务`ExecTask`（update/insert/delete）
 
-* 和5种【系统计划任务】：微信提醒，esmail，通讯录同步，审批同步，打卡同步：
+* 和5种【系统任务】：微信提醒，esmail，通讯录同步，审批同步，打卡同步：
 
-## 用户计划配置方式
-* 首先，建立一个sql/esap/XXX.get模板文件(可复制修改task.get)，编辑需要执行的sql模板
+## 用户任务配置
+* 首先，建立一个sql/esap/XXX.get文件(可复制修改task.get)，编辑需要执行的sql模板
 
-![](./img/task-1.png)
+{% raw %}
+```sql
+----查询任务QueryTask，四段(app db user title)
+{{define "qyyy esap @all kc"}}
+	select 品 as 品号,名 as 品名,isnull(数,0)as 库存 from vlbq where 1=1
+{{end}}
 
-* 然后，到配置中新增开启这些计划，并选择类型，编辑周期，保存重启即可。
+----新闻任务QueryNewsTask，五段(app db user title url)
+{{define "qyyy esap @all kc www.baidu.com"}}
+	select 品 as 品号,名 as 品名,isnull(数,0)as 库存 from vlbq where 1=1
+{{end}}
+
+----执行任务ExecTask，两段(db，唯一标识)
+{{define "task wxtx"}}
+	update wxtx set flag=1
+	update wxtx set jg='ok'
+{{end}}
+```
+{% endraw %}
+
+* 然后，到配置中新增并开启这些计划，选择类型，编辑周期(express)，保存重启即可。
 
 ![](./img/task-2.png)
 
-## 周期(Express)表达式详解
+## 周期(Express)表达式
 表达式一共6段，每段的意义和取值如下：
 
 |字段|允许值|特殊字符值|
