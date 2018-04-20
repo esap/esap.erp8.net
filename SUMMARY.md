@@ -31,5 +31,5 @@
 * [部署ESAP服务](dep.md)
 * [社区贡献](ref.md)
 * [捐赠玩家清单](donate.md)
-* [玩家秀](fun.md)
+* [部分案例库-玩家秀](fun.md)
 
