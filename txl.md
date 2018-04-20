@@ -20,7 +20,7 @@
 esap允许自定义通讯录查询sql，对接各种系统的组织架构。
 
 #### 具体步骤
-* 在计划任务中配置脚本前缀，例如`my.`，然后建立sql/esap/my_txl.get文件，使用notepad++进行编辑
+* 在计划任务中配置脚本前缀，例如`my.`，然后复制sql/esap/localuser.get文件重命名成`my_txl.get`文件，使用notepad++进行编辑
 
 ![](./img/txl-3.png)
 
@@ -32,7 +32,7 @@ esap允许自定义通讯录查询sql，对接各种系统的组织架构。
 {% raw %}
 ```sql
 {{define "my.sync.dept"}}
-	SELECT name, id, parentid, Order1 FROM 我的部门表
+	SELECT name, id, parentid, order as Order1 FROM 我的部门表
 {{end}}
 
 {{define "my.sync.user"}}

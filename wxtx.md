@@ -72,35 +72,13 @@
 > 保密消息只是相对的，请勿过于依赖。
 
 ## 待办提醒
-* 在ES系统的ES_Witodo表上加上下列触发器即可
+* 设置一个【微信提醒】计划任务，例如`esap ES待办提醒`，配置后缀为`.estodo`即可
 
-* 注意，**`ES系统用户名和账号要跟企业号通讯录的姓名账号一致`**
+![](./img/estodo.jpg)
 
-```sql
-USE [esap] --改成你自己的数据库
-GO
--- =============================================
--- Author:        woylin
--- Create date:   2017-8-28
--- Description:   esap3.0
--- =============================================
-IF  EXISTS (SELECT * FROM sys.objects 
-WHERE object_id = OBJECT_ID(N'tWxtx') AND type in (N'TR'))
-DROP TRIGGER [tWxtx]
-GO
-CREATE TRIGGER [dbo].[tWxtx] 
-   ON [dbo].[ES_Witodo] 
-   AFTER INSERT
-AS 
-BEGIN    
-    SET NOCOUNT ON;    
-    insert esap_tx(cdate, toUser, content) 
-    select getdate(), UserName, f.pName + wiDesc
-    from ES_WorkItem wi, ES_User u, inserted i, ES_WfTask t,ES_WorkFlow f
-    where wi.wiId=i.wiId and i.userId=u.UserId and wi.tId=t.tId and t.pId=f.pId
-    and isnull(wi.wiDesc,'')<>'' and ISNULL(wi.state1,0)<>1
-END
-```
+* 如果是【聚表模式】，配置后缀为`.jutodo`，其他同上。
+
+> 注意，**`系统用户名要跟企业号通讯录的姓名一致`**
 
 效果图：
 
