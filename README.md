@@ -8,9 +8,10 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ### [--快速开始--](quickstart.md)
 
 #### 重要通知
+* <span style="color:red">esap云管理台全新上线！地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
 * <span style="color:red">3.0.20版开始，支持聚表平台(Juable)，开启全新旅程</span>
 
-* <span style="color:red">3.0.16版开始，公众号和企业号回调接口已统一，即`host/wx/appname`，本文档为3.x版文档,2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
+* <span style="color:red">3.0.16版开始，公众号和企业号回调接口统一，即`host/wx/appName`，本文档为3.x版文档,2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
 
 * <span style="color:red">小程序通过ESAP与ES系统交互Demo全球首发:<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
@@ -63,6 +64,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]esap-admin云管理台上线，地址：[http://admin.erp8.net](http://admin.erp8.net)<span style="color:red"> 重要调整!</span>
 * [新增]微信多媒体库(图，音，影)上传后，可以扫描二维码等做为描述，菜单key=`inputdesc`<span style="color:red">玩家需求!</span>
 * [调整]微信查询文件时不再显示物理路径，仅显示文件名。<span style="color:red">玩家需求!</span>
 * [调整]优化微信accessToken获取机制，加锁，降低API调用超限风险。

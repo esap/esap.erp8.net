@@ -40,7 +40,7 @@
 
 > 注意，安装前请关闭360等软件，防止服务安装失败
 
-* 首次进入配置界面:[localhost:9090/admin](http://localhost:9090/admin)，账号：**admin**，密码：**erp8**
+* 首次进入配置界面:[http://admin.erp8.net](http://admin.erp8.net)，账号：**localhost:9090**，密码：**erp8**
 
 #### 首次配置
 * 设置应用名(appName)为`esap`的微信主应用(必须)，建议企业号，完善其他参数（appid填前面申请的企业号corpid，AgentId和Secret填前面记下的，Token和EncodingAesKey可以使用示例配置也可以自己在回调界面生成，须一致），然后打开“开关”，保存重启。
