@@ -1,9 +1,9 @@
 # 图表API
 <a href="http://echarts.baidu.com/index.html"><img width="120px" src="/img/echart.png" alt="echarts" /></a>
 
-* 从3.0版开始，ESAP加入了图表API,采用百度的开源图表库。
+* 从3.0版开始，ESAP加入了图表API，采用百度的`echarts`开源图表库。
 
-* 图表API是在数据API的基础上进行了可视化，相关基础知识可参考[数据API](sqltpl.md)。
+* `图表API`是在`数据API`的基础上进行了可视化，相关基础知识可参考[数据API](sqltpl.md)。
 
 ## 如何使用
 * 图表API的完整访问地址为
@@ -20,7 +20,6 @@
 
 ## 使用示例
 * 首先建立`sql/chart/sales.get`文件，定义sql模板的代码如下：
-{% raw %}
 ```sql
 {{define "销售"}}	
 	select 制单, sum(ISNULL(应收合计,0)) 七月 from 内销 --系列1	
@@ -32,13 +31,12 @@
 	group by 制单	
 {{end}}
 ```
-{% endraw %}
 
 * 示例定义了名为`销售`的sql模板，用来查询七、八月的销售业绩，其中有一个`p0`参数用来区分年份，当我们访问`http://host/chart?tp=bar&tt=ESAP图表&id=销售&wd=2017`时就可以看到下列图表。
 
 ![](./img/chart-1.jpg)
 
-* 可以更改图表类型，例如把tp改成`line`,然后刷新即可看到下面的折线图。
+* 可以更改图表类型，例如把`tp`改成`line`,然后刷新即可看到下面的折线图。
 
 ![](./img/chart-2.jpg)
 
@@ -53,7 +51,7 @@
 <img src="./img/chart-4.jpg" width="320">
 <img src="./img/chart-5.jpg" width="320">
 
-## 自定义图表模板
-图表URL的tmp参数可以导向不同的html模板。
+## 自定义图表模板<span style="color:red">(高级)</span>
+图表URL的`tmp`参数可以导向不同的html模板。
 
-例如，默认使用/view/chart.html模板，当tmp=1时，使用chart1.html模板，以此类推。
+例如，默认使用`/view/chart.html`模板，当`tmp=1`时，使用`chart1.html`模板，以此类推。

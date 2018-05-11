@@ -5,12 +5,11 @@
  2. 新闻任务`QueryNewsTask`（select）
  3. 执行任务`ExecTask`（update/insert/delete）
 
-* 和5种【系统任务】：微信提醒，esmail，通讯录同步，审批同步，打卡同步：
+* 和5种【系统任务】：`微信提醒`，`esmail`，`通讯录同步`，`审批同步`，`打卡同步`：
 
 ## 用户任务配置
-* 首先，建立一个sql/esap/XXX.get文件(可复制修改task.get)，编辑需要执行的sql模板
+* 首先，建立一个`sql/esap/XXX.get`文件，也可复制修改`task.get`，编辑需要执行的sql模板
 
-{% raw %}
 ```sql
 ----查询任务QueryTask，四段(app db user title)
 {{define "qyyy esap @all kc"}}
@@ -28,13 +27,12 @@
 	update wxtx set jg='ok'
 {{end}}
 ```
-{% endraw %}
 
-* 然后，到配置中新增并开启这些计划，选择类型，编辑周期(express)，保存重启即可。
+* 然后，到配置中新增并开启这些计划，选择类型，编辑周期`express`，保存重启即可。
 
 ![](./img/task-2.png)
 
-## 周期(Express)表达式
+## 周期Express表达式
 表达式一共6段，每段的意义和取值如下：
 
 |字段|允许值|特殊字符值|

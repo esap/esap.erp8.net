@@ -1,25 +1,21 @@
-# 总目录
-
-* [首页](README.md)
 * [快速开始](quickstart.md)
 * [微信提醒](wxtx.md)
 * [微信查询](wxcx.md)
- - [语法特性](wxcx1.md)
- - [特性支持](wxcx2.md)
+<!-- - [特性支持](wxcx2.md)-->
 <!-- - [微信会话](wxhh.md)-->
 * [多媒体库](mutimedia.md)
 * [增强功能](extra.md)
 <!-- - [微信权限](acl.md)-->
 * [计划任务](task.md)
- - [微信通讯录同步](txl.md)
- - [微信审批同步](wxsp.md)
- - [微信打卡同步](wxdk.md)
+* [微信通讯录同步](txl.md)
+* [微信审批同步](wxsp.md)
+* [微信打卡同步](wxdk.md)
 * [短信平台](sms.md)
 * [百度AI](bdai.md)
 * [数据API](sqltpl.md)
 * [图表API](echart.md)
 * [数据库驱动](feature.md)
-* [聚表模式(JUAP)](juap.md)
+* [聚表模式(<span style="color:red">JUAP</span>)](juap.md)
 * [常见问题](qa.md)
 * [ESAP起源](his.md)
  - [第1章 一切从吐槽说起](c1.md)

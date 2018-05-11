@@ -1,17 +1,8 @@
 # 数据库驱动
-ESAP整合了多种数据库驱动，可以连接大部分数据库，部分示例配置如下。
-
-* [SqlServer 2005+](#SqlServer 2005+)
-* [SqlServer 2000](#SqlServer 2000)
-* [mysql](#mysql)
-* [postgresql](#postgresql)
-* [sqlite](#sqlite)
-* [access](#access)
-* [excel](#excel)
-* [驱动企业平台](#驱动企业平台)
+ESAP整合了多种数据库驱动，可以连接大部分数据库。
 
 ## SqlServer 2005+
-```
+```yaml
 driver: mssql
 port: 1433
 server: localhost
@@ -21,7 +12,7 @@ db: esapp1
 ```
 
 ## SqlServer 2000
-```
+```yaml
 driver: sql2000
 port: 1433
 server: localhost
@@ -31,7 +22,7 @@ db: esapp1
 ```
 
 ## mysql
-```
+```yaml
 driver: mysql
 port: 3306
 server: localhost
@@ -41,7 +32,7 @@ db: db
 ```
 
 ## postgresql
-```
+```yaml
 driver: postgres
 port: 5432
 server: localhost
@@ -51,24 +42,24 @@ db: db
 ```
 
 ## sqlite
-```
+```yaml
 driver: sqlite
 db: "d:\\mydb.db"
 ```
 
 ## access
-```
+```yaml
 driver: access
 db: "d:\\mydb.mdb"
 ```
 
 ## excel
-```
+```yaml
 driver: excel
 db: "d:\\mydb.xls"
 ```
 
-## 驱动企业平台
+## 驱动企业ERP平台
 ESAP服务器直接与SQL交互，使用SQL的程序或系统都可以移植，包括并不限于下列项目：
 
 + 聚表
@@ -82,7 +73,7 @@ ESAP服务器直接与SQL交互，使用SQL的程序或系统都可以移植，�
 + 快表
 + 云表
 
-#### 驱动Excel服务器
+## 驱动Excel服务器
 
 * 如果使用聚表2.3.22+版，将安装包中的`JUAP_提醒`模板导入即可。
 
@@ -90,6 +81,6 @@ ESAP服务器直接与SQL交互，使用SQL的程序或系统都可以移植，�
 
 * 如果是聚表其他版，或者勤哲9.4以下版本，例如7.1.7，8.4，9.2等，则需自建这些`模板`，并保证表名和字段名一致。
 
-#### 驱动其他ERP系统
+## 驱动其他系统
 
-* 只要是使用SQL，都可以自行建立这些数据表，并保证名称类型一致即可。
+* 只要是使用`SQL`，都可以自行建立这些`esap_`前缀的数据表，并保证`名称类型`一致即可。

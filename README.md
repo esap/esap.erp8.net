@@ -2,29 +2,25 @@
   <img src="./img/esapLinkAll.png">
 </p>
 
-## ESAP·连接一切
+### ESAP·连接一切
 ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连接一切的酷炫梦幻产品!
 
-### [--快速开始--](quickstart.md)
+### [>> 快速开始 <<](quickstart.md)
 
 #### 重要通知
-* <span style="color:red">esap云管理台全新上线！地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
-* <span style="color:red">3.0.20版开始，支持聚表平台(Juable)，开启全新旅程</span>
+* <span style="color:rgb(233, 104, 107)">esap云管理台全新上线！地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
+* <span style="color:rgb(233, 104, 107)">3.0.20版开始，支持聚表平台(Juable)，开启全新旅程</span>
 
-* <span style="color:red">3.0.16版开始，公众号和企业号回调接口统一，即`host/wx/appName`，本文档为3.x版文档,2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
+* <span style="color:rgb(233, 104, 107)">3.0.16版开始，回调接口统一，即`host/wx/appName`，本文档为3.x版文档，2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
 
-* <span style="color:red">小程序通过ESAP与ES系统交互Demo全球首发:<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
+* <span style="color:rgb(233, 104, 107)">小程序通过ESAP与ES系统交互Demo全球首发：<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
-* <span style="color:red">技术讨论QQ群(ESAP-达摩院)：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入</span>
+* <span style="color:rgb(233, 104, 107)">技术讨论QQ群(ESAP-达摩院)：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入</span>
 
-##### ESAP下载工具
-* <a href="./build/esap-cli-x64.zip" target="_blank">esap-cli-x64版</a>
+##### ESAP安装工具
+* <a href="./build/esap-cli-x64.zip" download target="_blank">esap-cli-x64版</a>
 
 ##### 接口功能
-从3.0.16版开始企业号/公众号微信接口(/wx/应用名)已统一，都可提供完整的功能。
-
-**注意：公众号需要认证过，接口回调必须使用`安全加密模式`！**
-
 |功能特性|公众号|企业号|备注|
 |:----:|:--:|:--:|:----|
 |微信查询|√|√|公众号主要指认证过的服务号，订阅号部分接口可用|
@@ -41,6 +37,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 |查询特性：分条返回|√|√||
 |查询特性：系统变量|√|√|订阅服务号需使用本地通讯录，否则只有openid|
 
+!> 注意：公众号需要认证过，接口回调必须使用`安全加密模式`！
 #### 捐赠
 维护这个项目需要大量时间和精力，如果它确实帮上了你的忙，不要忘了请村长喝杯茶哦 :)
 

@@ -16,16 +16,14 @@
 ![](./img/sqlt1.png)
 
 * ESAP是如何获取SQL数据的呢？实际上，根据请求参数执行了`sql/api2/*.get`中的`vlbq`模板，然后返回sql查询结果，下面是模板定义。
-{% raw %} 
 ```sql
 {{define "vlbq"}}	
 	select * from vlbq where 名 like '%{{.s}}%'	
 {{end}}
 ```
-{% endraw %} 
 * 这个模板十分简单，有助于我们熟悉了解模板语法，首先用`define`定义了`vlbq`这个sql模板，尾部用`end`结束,模板中的请求参数用双花括号包裹。
 
-* 模板中的{\{.s}\}执行时会替换成实际的请求参数s，也就是`手机`,所以最终执行的sql语句是：
+* 模板中的`{{.s}}`执行时会替换成实际的请求参数s，也就是`手机`,所以最终执行的sql语句是：
 ```sql
 	select * from vlbq where 名 like '%手机%'
 ```
@@ -34,29 +32,24 @@
 ![](./img/sqlt2.png)
 
 ## 模板语法
-* sql模板使用了go语言的标准库text/template进行解析,所有的语法都与标准库兼容，包括标准模板函数。
+* sql模板使用了`go语言`的标准库`text/template`进行解析,所有的语法都与标准库兼容，包括标准模板函数。
 
 * 此外，sql模板还支持使用命名变量，也就是使用:s(`冒号+参数`)的形式，微信查询中的:pn就是这个原理，需要注意的有两点：
 
  - 如果字段的值内容中有冒号，那么需要用双冒号来实现转义，例如： `select N'小新说::大象你的鼻子怎么这么长？'` 才能输出：`小新说:大象你的鼻子怎么这么长？`
  - 如果参数名是中文，那么不支持命名变量，所以你不能写成这样：`select :品名`，而必须写成：
-{% raw %} 
 ```sql
 	select '{{.品名}}'
 ```
-{% endraw %}
 * 其他模板语法和函数可以百度[golang 模板语法](https://www.baidu.com/s?wd=go语言 模板语法)
 
 ## 变量与函数
 * 在sql模板里可定义变量和调用一些强大的自定函数，语法是：
-{% raw %}
 ```
 	{{funcname .arg1 .arg2}}
 ```
-{% endraw %}
 
 * 例如我们要产生一个新的图片picNo，就可以直接这样写：
-{% raw %}
 ```sql
 	declare @picNo nvarchar(20)
 	
@@ -64,18 +57,14 @@
 	
 	select @picNo
 ```
-{% endraw %}
 * 上面语句使用了sql原生变量，当然我们也可以用模板变量：
-{% raw %}
 ```sql
-	{{$picno := newpicno}} 
-	
-	--后续可直接使用{{$picno}}
+	{{$picno := newpicno}} 	--后续可直接使用{{$picno}}
+
 	select '{{$picno}}'
 ```
-{% endraw %}
 
-## *常用自定义函数[高级教程]
+## *常用函数<span style="color:red">(高级)</span>
 |函数名称|类型|说明|
 |:----:|:--:|:--:|
 |and|标准|and 条件|
