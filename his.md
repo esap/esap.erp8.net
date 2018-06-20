@@ -26,7 +26,8 @@ ESAP拥有一套完整的独立生态，现在ESAP主要包括以下模块：
 
 #### ESAP-Admin
 提供ESAP管理端的访问，公开发布，源码开源在https://github.com/esap/admin
-> URL示例：`http://ESAP服务器IP:9090/admin`
+
+**[在线示例体验](http://admin.erp8.net)**
 
 #### ESAP-WebServer
 提供专门设计的Webserver，模块化+插件式开发，动态编译，不依赖IIS，部署简单，工程化，一个配置文件(esap.yml)搞定动态加载启动，已公开发布。
@@ -37,18 +38,14 @@ ESAP拥有一套完整的独立生态，现在ESAP主要包括以下模块：
 **[在线示例体验](https://demo.esap.vip)**
 
 #### 微信API
-* 对接`企业微信、企业号`的API，提供企业号应用接口功能，实现用户与ES对话式的交互，已公开发布。
+* 对接`企业微信、企业号、订阅号、服务号、小程序`的API，提供应用接口功能，实现用户与ERP对话式的交互，已公开发布。
 
 > 回调URL示例：`http://ESAP服务器IP:9090/wx/应用名`
-
-* 对接微信`订阅号、服务号、小程序`的API，提供回调接口功能，实现用户与ES对话式的交互，已公开发布。
-
-> 回调URL示例：`http://ESAP服务器IP:9090/wxs/应用名`
 
 #### ESAP主库
 驱动ESAP微信应用的主数据库，已发布。
 
-#### ES-API
+#### ESJU-API
 对接ES，JU库的专用API，不同于ESWEB，ES-API除了提供ES，JU数据访问、还提供图片、附件访问，甚至包括官方没有的缩略图等接口功能，已公开发布。
 > URL示例：`http://ESAP服务器IP:9090/es/action`
 
