@@ -11,4 +11,6 @@
 
 * 营业执照 `ocrbusinesslicense`
 
+* 名片 `ocrbusinesscard`
+
 * 此功能使用可参考村长博客：[拥抱AI，享受工作](http://ylin.wang/2017/07/13/esap18/)

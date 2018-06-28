@@ -61,6 +61,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]百度AI新增名片识别，key=`ocrbusinesscard`。
 * [新增]esap-admin云管理台新增ES2JU图片附件转存工具。
 * [新增]esap-admin云管理台上线，地址：[http://admin.erp8.net](http://admin.erp8.net)<span style="color:red"> 重要调整!</span>
 * [新增]微信多媒体库(图，音，影)上传后，可以扫描二维码等做为描述，菜单key=`inputdesc`<span style="color:red">玩家需求!</span>
