@@ -61,6 +61,8 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]名片识别新增`电话``传真``QQ`字段。<span style="color:red">玩家需求!</span>
+* [新增]新增对接腾讯AI，名片识别切换到腾讯AI。
 * [新增]百度AI新增名片识别，key=`ocrbusinesscard`。
 * [新增]esap-admin云管理台新增ES2JU图片附件转存工具。
 * [新增]esap-admin云管理台上线，地址：[http://admin.erp8.net](http://admin.erp8.net)<span style="color:red"> 重要调整!</span>
