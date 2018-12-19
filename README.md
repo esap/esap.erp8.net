@@ -20,6 +20,13 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### ESAP安装工具
 * <a href="./build/esap-cli-x64.zip" download target="_blank">esap-cli-x64版</a>
 
+##### NAT工具
+* <a href="./build/frp.rar" download target="_blank">FRP-x64版</a>
+
+> 下载解压到任意文件夹，修改frpc.ini的`自定义`文字为自己的corpid，双击install.bat，即可穿透内网进行回调
+
+> 回调地址示例：`http://wx123456789.erp8.net:8080/wx/esap`
+
 ##### 接口功能
 |功能特性|公众号|企业号|备注|
 |:----:|:--:|:--:|:----|
@@ -61,6 +68,9 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]图标API新增自定义模板chart1.html，可用于工资查询等流式布局的web页面返回显示。
+* [新增]API日志新增用户名显示。
+* [新增]新增关闭媒体库选项，可控制用户发送的图片、视频、音频库是否能上传存储。
 * [新增]微信查询新增重启指令，key=`esapstart`，请注意设置应用权限，防止普通用户可操作。
 * [修复]修复JUAP模式下通过admin上传的附件不能提醒的问题。
 * [新增]名片识别新增`电话`，`传真`，`QQ`字段。<span style="color:red">玩家需求!</span>

@@ -103,6 +103,7 @@ select N'你的信息已成功提交，谢谢使用'
 ```
 
 <img src="./img/8.24.jpg" width="240">
+
 ![](./img/8.23.png)
 
 ## 多重权限
@@ -133,7 +134,7 @@ select N'你的信息已成功提交，谢谢使用'
 <img src="./img/wxcx-3.jpg" width="240">
 
 ## 扫码查询
-二维码或其他条码等,`esap_cx`表中的`mkey`与自定义菜单的`扫码弹框菜单key`对应即可
+二维码或其他条码等,`esap_cx`表中的`mkey`与自定义菜单的`扫码弹框菜单ID`对应即可
 
 <img src="./img/8.16.png" width="240">
 <img src="./img/8.6.jpg" width="240">
@@ -168,7 +169,7 @@ select N'你的信息已成功提交，谢谢使用'
 <img src="./img/8.44.jpg" width="240">
 
 ## 菜单查询
-设置`mkey`，与企业号应用自定义菜单中的`key`一致。
+设置`mkey`，与企业号应用自定义菜单ID一致。
 
 <img src="./img/8.27.jpg" width="320">
 <img src="./img/8.28.jpg" width="320">

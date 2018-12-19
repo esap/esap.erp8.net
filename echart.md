@@ -55,3 +55,21 @@
 图表URL的`tmp`参数可以导向不同的html模板。
 
 例如，默认使用`/view/chart.html`模板，当`tmp=1`时，使用`chart1.html`模板，以此类推。
+
+chart1.html已经预设了一个流式布局的模板，可以用来显示一些查询信息。
+
+例如我们建立一个用于工资查询的sql模板如下：
+```sql
+{{define "工资"}}
+	select 基本工资,奖金,补贴,加班费,总计 from 工资条D where 姓名='{{.p0}}'
+{{end}}
+```
+
+再建立一个微信查询，使用当前姓名做参数。
+
+<img src="./img/chart-7.png" >
+
+也可以是一个菜单，快速查询当前用户的数据。
+
+<img src="./img/chart-6.png" >
+
