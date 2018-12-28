@@ -39,3 +39,21 @@ esap允许自定义通讯录查询sql，对接各种系统的组织架构。
 	FROM 我的用户表
 {{end}}
 ```
+
+## *通讯录自定义字段同步<span style="color:red">(高级)</span>
+esap允许将自己的自定义字段同步到微信通讯录。
+
+#### 具体步骤
+* 先按[官网文档](https://work.weixin.qq.com/api/doc#90000/90135/90193/%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7%E7%9A%84%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95)配置自己的自定义字段，例如村长加了`爱好`，`卡号`两个字段。
+
+* 在前面的`my_txl.get`文件中定义`my.sync.userattr`脚本即可，示例如下：
+
+```sql
+{{define "my.sync.userattr"}}
+	SELECT
+		爱好,卡号  --这里的字段可以增减，最多250个，
+	FROM esap_user where name=:name
+{{end}}
+```
+
+![](./img/txl-attr.png)
