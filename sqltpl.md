@@ -81,6 +81,7 @@
 |int64date|ESAP|将日期戳转换成日期，主要用于微信审批同步的日期处理|
 |int64datetime|ESAP|将日期戳转换成日期时间，主要用于微信审批同步的日期+时间处理|
 |getwechatname|ESAP|根据微信userid获取姓名|
-|checktableid|ESAP|检查table中某id是否存在，原型是CheckTableId(db, table, field, value)|
+|checktableid|ESAP|从dbs的table中查某id是否存在，原型是CheckTableId(dbs, table, field, value)|
+|gettablevalue|ESAP|从dbs的table表中根据cond=value查询ret字段值，原型是GetTableValue(dbs, table, cond, ret, value)|
 |linkname|ESAP|使用linkno换取附件名|
 |sendtext|ESAP|发送消息，原型是SendMsg(appname, touser, content)|

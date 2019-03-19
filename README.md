@@ -9,7 +9,6 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 
 #### 重要通知
 * <span style="color:rgb(233, 104, 107)">esap云管理台全新上线！地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
-* <span style="color:rgb(233, 104, 107)">3.0.20版开始，支持聚表平台(Juable)，开启全新旅程</span>
 
 * <span style="color:rgb(233, 104, 107)">3.0.16版开始，回调接口统一，即`host/wx/appName`，本文档为3.x版文档，2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
 
@@ -18,10 +17,10 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 * <span style="color:rgb(233, 104, 107)">技术讨论QQ群(ESAP-达摩院)：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入</span>
 
 ##### ESAP安装工具
-* <a href="./build/esap-cli-x64.zip" download target="_blank">esap-cli-x64版</a>
+* <a href="./build/esap-cli.zip" download target="_blank">esap-cli</a>
 
 ##### NAT工具
-* <a href="./build/frp.rar" download target="_blank">FRP-x64版</a>
+* <a href="./build/frp.zip" download target="_blank">FRP客户端版</a>
 
 > 下载解压到任意文件夹，修改frpc.ini的`自定义`文字为自己的corpid，双击install.bat，即可穿透内网进行回调
 
@@ -68,6 +67,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v3.0 Strike!
 2017年`七夕`发布首个beta版，公测中
 
+* [新增]微信查询新增新建表单模式，该模式会获取rcid，可用于后续连续查询。
 * [新增]通讯录同步新增标签用户完全同步(增删改)。
 * [新增]通讯录变量新增`别名`（{{别名}}）。
 * [新增]通讯录同步新增自定义字段同步。
