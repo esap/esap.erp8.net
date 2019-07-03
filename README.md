@@ -8,9 +8,9 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ### [>> 快速开始 <<](quickstart.md)
 
 #### 重要通知
-* <span style="color:rgb(233, 104, 107)">esap云管理台全新上线！地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
+* <span style="color:rgb(233, 104, 107)">esap云管理台地址：[http://admin.erp8.net](http://admin.erp8.net)</span>
 
-* <span style="color:rgb(233, 104, 107)">3.0.16版开始，回调接口统一，即`host/wx/appName`，本文档为3.x版文档，2.x文档请前往:<a href="https://esap.vip/2.8/">旧版文档</a></span>
+* <span style="color:rgb(233, 104, 107)">本文档为4.x版文档，3.x文档请前往:<a href="https://esap.vip/3.x/">3.x文档</a></span>2.x文档请前往:<a href="https://esap.vip/2.8/">2.8文档</a></span>
 
 * <span style="color:rgb(233, 104, 107)">小程序通过ESAP与ES系统交互Demo全球首发：<a href="https://github.com/esap/miniapp">https://github.com/esap/miniapp</a></span>
 
@@ -67,9 +67,15 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 
 #### 更新日志
 
-##### v3.0 Strike!
-2017年`七夕`发布首个beta版，公测中
+##### v4.0 Justice!
+2019年`七月`发布
 
+* [新增]4.0精简优化了大量细节，极大增强对web-api的对接能力，原生支持JU/NX，能同时对接包括并不限于百度云(sugar,AI)，腾讯云(微信公众号，QQ)，阿里云(钉钉，api市场)，更高更快更强！
+
+##### v3.0 Strike!
+2017年`七夕`发布
+
+* [修复]修复企业微信用户超过100后，打卡记录下载不全的问题。
 * [新增]微信查询新增新建表单模式，该模式会获取rcid，可用于后续连续查询。
 * [新增]通讯录同步新增标签用户完全同步(增删改)。
 * [新增]通讯录变量新增`别名`（{{别名}}）。

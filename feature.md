@@ -41,19 +41,19 @@ pwd: 123
 db: db
 ```
 
-## sqlite
+## sqlite（已停用）
 ```yaml
 driver: sqlite
 db: "d:\\mydb.db"
 ```
 
-## access
+## access（已停用）
 ```yaml
 driver: access
 db: "d:\\mydb.mdb"
 ```
 
-## excel
+## excel（已停用）
 ```yaml
 driver: excel
 db: "d:\\mydb.xls"
@@ -62,8 +62,10 @@ db: "d:\\mydb.xls"
 ## 驱动企业ERP平台
 ESAP服务器直接与SQL交互，使用SQL的程序或系统都可以移植，包括并不限于下列项目：
 
-+ 聚表
-+ 勤哲
++ 聚表 JU
++ 慧表 NX
++ 勤哲 ES
++ 活字格 HZG
 + 冠日
 + 金蝶
 + 用友
@@ -75,11 +77,7 @@ ESAP服务器直接与SQL交互，使用SQL的程序或系统都可以移植，�
 
 ## 驱动Excel服务器
 
-* 如果使用聚表2.3.22+版，将安装包中的`JUAP_提醒`模板导入即可。
-
-* 如果使用勤哲9.4+版，将安装包中的`ESAP_提醒`模板导入即可。
-
-* 如果是聚表其他版，或者勤哲9.4以下版本，例如7.1.7，8.4，9.2等，则需自建这些`模板`，并保证表名和字段名一致。
+* 通常导入或自建`ESAP_xx`模板，保证映射到的`esap_xx`表名和字段名一致。
 
 ## 驱动其他系统
 

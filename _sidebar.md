@@ -15,7 +15,7 @@
 * [数据API](sqltpl.md)
 * [图表API](echart.md)
 * [数据库驱动](feature.md)
-* [聚表模式(<span style="color:red">JUAP</span>)](juap.md)
+* [新版区别(<span style="color:red">4.0</span>)](newver.md)
 * [常见问题](qa.md)
 * [ESAP起源](his.md)
  - [第1章 一切从吐槽说起](c1.md)
