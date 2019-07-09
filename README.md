@@ -22,6 +22,9 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### ESAP令牌服务器
 * <a href="./build/tokenserver.zip" download target="_blank">TokenServer</a>
 
+##### ESAP-QQ机器人插件（支持cleverqq）
+* <a href="./build/esap-qq.zip" download target="_blank">esap-qq</a>
+
 ##### NAT工具
 * <a href="./build/frp.zip" download target="_blank">FRP客户端版</a>
 
@@ -70,6 +73,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v4.0 Justice!
 2019年`七月`发布
 
+* [新增]新增机器人API，示例：http://localhost:9090/robot/，支持cleverqq.
 * [新增]4.0精简优化了大量细节，极大增强对web-api的对接能力，原生支持JU/NX，能同时对接包括并不限于百度云(sugar,AI)，腾讯云(微信公众号，QQ)，阿里云(钉钉，api市场)，更高更快更强！
 
 ##### v3.0 Strike!
