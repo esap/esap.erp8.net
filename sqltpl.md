@@ -76,11 +76,16 @@
 |newlinkno|ESAP|调用GetNewId_s获取  ES新linkNo|
 |rtid|ESAP|传入模板名称获取rtid|
 |get|ESAP|发起一个get请求，get(url)|
+|getbody|ESAP|发起一个get请求，返回body字节，getbody(url)|
 |post|ESAP|发起一个post请求,post(url,body)|
 |token|ESAP|从token服务器获取某个应用的access_token,token(appname)|
 |map|ESAP|传入键值对，制作map,主要用于发送post请求时的body构建|
+|mapset|ESAP|为map设置一个值，mapset(map,key,val)|
 |str2map|ESAP|传入json文本，得到一个解析的map结果,主要用于钉钉审批解析|
 |base64|ESAP|主要用于图片的base64编码|
+|md5|ESAP|计算字符串的md5|
+|rand|ESAP|生成随机字符串 randstring(strlen)|
+|time|ESAP|生成当前Unix时间戳|
 |body|ESAP|主要用于url转成图片byte，以便用于后面的AI解析等|
 |strjoin|ESAP|string数组转普通string|
 |isju|ESAP|判断数据库是否为JU/NX|
