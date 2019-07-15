@@ -30,6 +30,12 @@ ESAP-wxbot机器人插件（支持微信个人号的群聊私聊）
 
 * <a href="./build/esap-wxbot.zip" download target="_blank">esap-wxbot</a>
 
+## 有度机器人组件(比飞秋更强大)
+
+ESAP-ydbot机器人插件
+
+* <a href="./build/esap-ydbot.zip" download target="_blank">esap-ydbot</a>
+
 ## 飞秋机器人组件
 
 ESAP-feiq机器人插件（支持文字查询）

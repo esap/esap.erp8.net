@@ -27,6 +27,8 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 * <a href="./build/esap-wxbot.zip" download target="_blank">esap-wxbot</a> 微信机器人组件，支持个人号群聊
 
 * <a href="./build/esap-qq.zip" download target="_blank">esap-qq</a> QQ机器人插件，支持cleverqq
+
+* <a href="./build/esap-ydbot.zip" download target="_blank">esap-ydbot</a> [有度](https://youdu.im/)机器人组件
  
 * <a href="./build/esap-feiq.zip" download target="_blank">esap-feiq</a> 飞秋机器人组件，仅支持文字查询
 
@@ -82,8 +84,10 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v4.0 Justice!
 2019年`七月`发布
 
+* [修复]修复网盘目录不存在时文件存储失败的问题。
+* [新增]新增`有度机器人`组件：esap-ydbot,适用于禁外网时使用有度IM进行ESAP查询。
 * [修复]修复admin不能新建修改查询。
-* [调整]取消内置AI菜单ID，全部使用模查询板。
+* [调整]取消内置AI菜单ID，全部使用模板查询。
 * [新增]模板新增`mapset`,`time`,`rand`,`md5`函数，全面对接 **腾讯AI**.
 * [新增]查询新增`退出`内置命令，可以退出连续查询.
 * [新增]新增`飞秋机器人`组件：esap-feiQ.

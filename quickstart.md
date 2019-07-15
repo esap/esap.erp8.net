@@ -72,7 +72,8 @@ port: "9090" #监听端口
 pwd: 777c43f12c5bd3f40d86b4fdf549e1f8 #管理台密码，md5，默认：erp8
 syncdelay: 200 #通讯录同步延时，最小100(毫秒)
 retrymsg: false #微信提醒失败重发开关，为true时开启
-tokenserver: http://erp8.net:19999 #口令服务器
+usetoken: true #开启令牌服务
+tokenserver: http://erp8.net:19999 #令牌服务器
 usenetpath: true #开启网盘
 netpath: y:/nxfile #网盘路径
 entermsg: false #用户进入时显示可用列表开关，为true时开启
