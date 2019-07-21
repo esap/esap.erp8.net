@@ -5,23 +5,23 @@
  2. 新闻任务`QueryNewsTask`（select）
  3. 执行任务`ExecTask`（update/insert/delete）
 
-* 和5种【系统任务】：`微信提醒`，`esmail`，`通讯录同步`，`审批同步`，`打卡同步`：
+* 和5种【系统任务】：`微信提醒`，`Email`，`通讯录同步`，`审批同步`，`打卡同步`：
 
 ## 用户任务配置
-* 首先，建立一个`sql/esap/XXX.get`文件，也可复制修改`task.get`，编辑需要执行的sql模板
+* 首先，建立一个`sql/sys/XXX.get`文件，也可复制修改`task.get`，编辑需要执行的sql模板
 
 ```sql
-----查询任务QueryTask，四段(app db user title)
+----查询任务QueryTask，四段ID(app db user title)
 {{define "qyyy esap @all kc"}}
 	select 品 as 品号,名 as 品名,isnull(数,0)as 库存 from vlbq where 1=1
 {{end}}
 
-----新闻任务QueryNewsTask，五段(app db user title url)
+----新闻任务QueryNewsTask，五段ID(app db user title url)
 {{define "qyyy esap @all kc www.baidu.com"}}
 	select 品 as 品号,名 as 品名,isnull(数,0)as 库存 from vlbq where 1=1
 {{end}}
 
-----执行任务ExecTask，两段(db，唯一标识)
+----执行任务ExecTask，两段ID(db，唯一标识)
 {{define "task wxtx"}}
 	update wxtx set flag=1
 	update wxtx set jg='ok'

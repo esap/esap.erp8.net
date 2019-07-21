@@ -91,6 +91,7 @@ ESAP服务器，村长亲自打造，集BAT技术精华于一身，致力于连�
 ##### v4.0 Justice!
 2019年`七月`发布
 
+* [新增]sql模板函数新增ES专属函数repcase(rcid,tmpname)
 * [新增]修复图片文件get接口
 * [调整]sql函数调整，与数据库相关函数最后一个参数可传dbname指定数据源。
 * [新增]新版esap-cli会备份原有sql目录到sql.zip

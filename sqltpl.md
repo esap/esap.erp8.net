@@ -99,4 +99,5 @@
 |checktableid|ESAP|从dbs的table中查某id是否存在，原型是CheckTableId(dbs, table, field, value)|
 |gettablevalue|ESAP|从dbs的table表中根据cond=value查询ret字段值，原型是GetTableValue(dbs, table, cond, ret, value)|
 |linkname|ESAP|使用linkno换取附件名|
+|repcase|ESAP|ES专属，repcase(rcid,tmpname)，传入rcid和模板名，实现插入记录的工作台显示|
 |sendtext|ESAP|发送消息，原型是SendMsg(appname, touser, content)|
