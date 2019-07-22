@@ -18,7 +18,7 @@ ESAP从4.0.0版开始原生支持JU/NX聚表/慧表平台，其他变化如下�
 
 ![](./img/newver-dbname.png)
 
-这也意味着ES不再受原生支持，部分任务可能需要加入`.es`后缀，例如：提醒，邮件
+这也意味着ES不再受原生支持，部分任务需要加入`.es`后缀，例如：提醒，邮件，同步
 
 ![](./img/newver-tx.jpg)
 
@@ -30,4 +30,4 @@ ESAP从4.0.0版开始原生支持JU/NX聚表/慧表平台，其他变化如下�
 
 提醒表esap_tx增加了msgtype,msgid,description字段
 
-查询表esap_cx增加了appid和tmpid字段
+查询表esap_cx增加了appid和tmpid字段，mode字段由整形改为文本
